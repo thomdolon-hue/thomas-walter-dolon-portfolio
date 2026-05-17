@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Thomas Walter Dolon | Fintech & Compliance Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0a1628;--navy2:#0f2040;--navy3:#162952;
+  --gold:#c9a84c;--gold2:#e8c96a;--gold3:#f5e0a0;
+  --text:#e8edf5;--text2:#a8b4c8;--text3:#6b7a94;
+  --card:#131f35;--card2:#1a2840;
+  --border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.3);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--text);line-height:1.6}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 2rem}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:0.5px}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+
+/* SECTIONS */
+section{padding:6rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:0.75rem;font-weight:600;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:0.75rem}
+.section-title{font-size:2rem;font-weight:700;color:var(--text);margin-bottom:1rem}
+.gold-line{width:48px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;margin-bottom:2.5rem}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 50%,var(--navy3) 100%);position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%)}
+#hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.04) 0%,transparent 70%)}
+.hero-content{max-width:1100px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.1);border:1px solid var(--border2);border-radius:20px;padding:6px 16px;font-size:0.8rem;color:var(--gold2);margin-bottom:1.5rem;font-weight:500}
+.hero-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+h1.hero-name{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;line-height:1.1;margin-bottom:0.5rem;color:#fff}
+h1.hero-name span{color:var(--gold)}
+.hero-title{font-size:1.15rem;color:var(--text2);margin-bottom:1.5rem;font-weight:400}
+.hero-desc{max-width:580px;color:var(--text2);font-size:0.95rem;line-height:1.8;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:0.75rem 1.75rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:opacity 0.2s,transform 0.2s}
+.btn-primary:hover{opacity:0.9;transform:translateY(-1px)}
+.btn-outline{border:1px solid var(--border2);color:var(--gold);padding:0.75rem 1.75rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.2s}
+.btn-outline:hover{background:rgba(201,168,76,0.08);transform:translateY(-1px)}
+.hero-stats{display:flex;gap:3rem;margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--border)}
+.stat-num{font-size:2rem;font-weight:700;color:var(--gold)}
+.stat-label{font-size:0.8rem;color:var(--text3);margin-top:2px}
+
+/* ABOUT */
+#about{background:var(--navy2)}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start}
+.about-avatar{width:100%;aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,var(--card) 0%,var(--card2) 100%);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:5rem;font-weight:700;color:var(--gold);letter-spacing:-2px}
+.about-text p{color:var(--text2);font-size:0.95rem;line-height:1.9;margin-bottom:1rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem}
+.tag{background:rgba(201,168,76,0.08);border:1px solid var(--border);color:var(--gold2);padding:5px 14px;border-radius:20px;font-size:0.78rem;font-weight:500}
+
+/* SERVICES */
+#services{background:var(--navy)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;transition:border-color 0.3s,transform 0.2s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));opacity:0;transition:opacity 0.3s}
+.service-card:hover{border-color:var(--border2);transform:translateY(-4px)}
+.service-card:hover::before{opacity:1}
+.service-icon{width:48px;height:48px;border-radius:12px;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:1.4rem}
+.service-card h3{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.75rem}
+.service-card p{font-size:0.85rem;color:var(--text2);line-height:1.8}
+.service-exp{display:inline-block;margin-top:1rem;font-size:0.75rem;color:var(--gold);background:rgba(201,168,76,0.08);padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
+
+/* EXPERIENCE */
+#experience{background:var(--navy2)}
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),transparent)}
+.timeline-item{position:relative;margin-bottom:2.5rem}
+.timeline-item::before{content:'';position:absolute;left:-2.35rem;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--navy2);box-shadow:0 0 0 3px rgba(201,168,76,0.2)}
+.timeline-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem}
+.timeline-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:start;gap:0.5rem;margin-bottom:0.75rem}
+.timeline-role{font-size:1rem;font-weight:600;color:var(--text)}
+.timeline-period{font-size:0.8rem;color:var(--gold2);background:rgba(201,168,76,0.08);padding:3px 10px;border-radius:10px;white-space:nowrap}
+.timeline-company{font-size:0.85rem;color:var(--gold);margin-bottom:1rem;font-weight:500}
+.timeline-bullets{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.timeline-bullets li{font-size:0.85rem;color:var(--text2);padding-left:1rem;position:relative;line-height:1.7}
+.timeline-bullets li::before{content:'›';position:absolute;left:0;color:var(--gold)}
+
+/* SKILLS */
+#skills{background:var(--navy)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.3s}
+.skill-card:hover{border-color:var(--border2)}
+.skill-icon{font-size:1.5rem;width:40px;text-align:center;flex-shrink:0}
+.skill-name{font-size:0.85rem;font-weight:500;color:var(--text)}
+
+/* CONTACT */
+#contact{background:var(--navy2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-intro{font-size:0.95rem;color:var(--text2);line-height:1.9;margin-bottom:2rem}
+.contact-items{display:flex;flex-direction:column;gap:1rem}
+.contact-item{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;text-decoration:none;transition:border-color 0.3s,transform 0.2s;color:inherit}
+.contact-item:hover{border-color:var(--border2);transform:translateX(4px)}
+.ci-icon{width:40px;height:40px;border-radius:10px;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.ci-label{font-size:0.75rem;color:var(--text3);margin-bottom:2px}
+.ci-val{font-size:0.9rem;color:var(--text);font-weight:500}
+
+/* FOOTER */
+footer{background:var(--navy);border-top:1px solid var(--border);padding:2rem;text-align:center}
+footer p{font-size:0.8rem;color:var(--text3)}
+footer span{color:var(--gold)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-avatar{max-width:200px}
+  .hero-stats{gap:2rem}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">TWD</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-primary" style="padding:0.5rem 1.25rem;font-size:0.82rem">Hire Me</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="container hero-content">
+    <div class="hero-badge">Available for Freelance Work</div>
+    <h1 class="hero-name">Thomas Walter<br><span>Dolon</span></h1>
+    <p class="hero-title">Fintech · Compliance · Payments Specialist</p>
+    <p class="hero-desc">10+ years of experience in global banking and financial compliance. Specialized in sanctions screening, fraud prevention, chargebacks, and high-risk merchant onboarding. Former JPMorgan Chase professional now offering expert freelance services.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">View My Services</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+      <div><div class="stat-num">4</div><div class="stat-label">Core Specializations</div></div>
+      <div><div class="stat-num">JPM</div><div class="stat-label">Former Employer</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="about-avatar">TWD</div>
+      </div>
+      <div>
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Compliance & Payments Professional</h2>
+        <div class="gold-line"></div>
+        <p class="about-text"><p>I'm a seasoned fintech and compliance specialist with over a decade of hands-on experience at JPMorgan Chase & Co. My career spans fraud prevention, chargeback management, sanctions screening (name & transaction), and financial crime compliance.</p></p>
+        <p class="about-text"><p>Today, I offer my deep expertise as a freelancer — helping businesses navigate complex compliance requirements, secure payment processing, and build robust screening and risk management workflows.</p></p>
+        <div class="about-tags">
+          <span class="tag">Sanctions Screening</span>
+          <span class="tag">Fraud Prevention</span>
+          <span class="tag">Chargebacks</span>
+          <span class="tag">KYC / KYB</span>
+          <span class="tag">Payment Onboarding</span>
+          <span class="tag">OFAC / EU / UN</span>
+          <span class="tag">SWIFT / SEPA</span>
+          <span class="tag">AML Compliance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <p class="section-label">What I Offer</p>
+    <h2 class="section-title">Freelance Services</h2>
+    <div class="gold-line"></div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🏦</div>
+        <h3>Onboarding Specialist</h3>
+        <p>I help high-risk merchants secure their payment processing infrastructure — including outreach to PSPs, acquirers, ISOs, EMIs, and payment gateways. I assist with KYC/KYB documentation, compliance communication, and email management throughout the onboarding process.</p>
+        <span class="service-exp">3 months experience</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>Screening Testing & Optimization</h3>
+        <p>End-to-end testing of Name and Transaction Screening systems using Fircosoft Classics and SWIFT STS feeds. I analyze screening outcomes, evaluate matching thresholds, conduct adverse media validation via Moody's RDC, and provide actionable recommendations to reduce false positives and improve regulatory accuracy.</p>
+        <span class="service-exp">2 years experience</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Alert Handling – Name & Transaction Screening</h3>
+        <p>Senior-level review and disposition of sanctions alerts using Fircosoft FFF and FMF. I investigate OFAC, EU, and UN sanctions list matches, interpret SWIFT and SEPA payment messages, apply fuzzy match logic, and escalate confirmed risks with full audit-ready documentation.</p>
+        <span class="service-exp">4+ years experience</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Chargeback & Fraud Specialist</h3>
+        <p>End-to-end chargeback and representment management under Visa and Mastercard frameworks using VROL and MCDF. Fraud investigation across CNP, counterfeit, and account takeover scenarios using Falcon and Taser systems, with full case documentation for audit and recovery tracking.</p>
+        <span class="service-exp">8+ years experience</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Career History</p>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="gold-line"></div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role">Onboarding Specialist</span>
+            <span class="timeline-period" style="background:rgba(201,168,76,0.18);color:var(--gold)">2026 – Present 🟢</span>
+          </div>
+          <div class="timeline-company">Freelance / Independent</div>
+          <ul class="timeline-bullets">
+            <li>Helping high-risk merchants secure payment processing solutions</li>
+            <li>Outreach to PSPs, acquirers, ISOs, EMIs, and payment gateways on behalf of clients</li>
+            <li>Guiding merchants through KYC/KYB documentation and compliance requirements</li>
+            <li>Managing compliance correspondence and email communication throughout onboarding</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role">Screening Testing & Optimization Expert</span>
+            <span class="timeline-period">Apr 2024 – Mar 2026</span>
+          </div>
+          <div class="timeline-company">Freelance / Independent</div>
+          <ul class="timeline-bullets">
+            <li>End-to-end testing of Name and Transaction Screening systems using Fircosoft Classics</li>
+            <li>Generated fuzzy name variations using SWIFT Sanctions Testing Service (STS) feeds</li>
+            <li>Evaluated matching thresholds, scoring behavior, and algorithm logic for optimization</li>
+            <li>Conducted adverse media screening validation using Moody's Risk Data Center (RDC)</li>
+            <li>Documented findings, risks, and recommendations for stakeholders</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role">Senior Alert Handler – Name & Transaction Screening</span>
+            <span class="timeline-period">Mar 2020 – Apr 2024</span>
+          </div>
+          <div class="timeline-company" style="display:flex;align-items:center;gap:10px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/J_P_Morgan_Logo_2008_1.svg/200px-J_P_Morgan_Logo_2008_1.svg.png" alt="JPMorgan Chase" style="height:20px;filter:brightness(0) invert(1);opacity:0.85"/>
+            <span>JPMorgan Chase & Co. · Philippines</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Reviewed and dispositioned screening alerts using Fircosoft FFF and FMF</li>
+            <li>Investigated potential matches against OFAC, EU, and UN sanctions lists</li>
+            <li>Interpreted SWIFT and SEPA payment messages for sanctions exposure assessment</li>
+            <li>Applied fuzzy match logic to distinguish true hits from false positives</li>
+            <li>Maintained SLA compliance in a high-volume global banking environment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role">Chargeback & Representment Senior Specialist I</span>
+            <span class="timeline-period">Aug 2014 – Mar 2020</span>
+          </div>
+          <div class="timeline-company" style="display:flex;align-items:center;gap:10px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/J_P_Morgan_Logo_2008_1.svg/200px-J_P_Morgan_Logo_2008_1.svg.png" alt="JPMorgan Chase" style="height:20px;filter:brightness(0) invert(1);opacity:0.85"/>
+            <span>JPMorgan Chase & Co. · Metro Manila</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Managed end-to-end chargeback and representment lifecycle under Visa and Mastercard frameworks</li>
+            <li>Handled disputes via Visa Resolve Online (VROL) and Mastercard Dispute Form (MCDF)</li>
+            <li>Prepared structured evidence packages aligned with card scheme requirements</li>
+            <li>Ensured adherence to submission deadlines and SLA standards</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role">Fraud Prevention Specialist III</span>
+            <span class="timeline-period">May 2012 – Aug 2014</span>
+          </div>
+          <div class="timeline-company" style="display:flex;align-items:center;gap:10px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/J_P_Morgan_Logo_2008_1.svg/200px-J_P_Morgan_Logo_2008_1.svg.png" alt="JPMorgan Chase" style="height:20px;filter:brightness(0) invert(1);opacity:0.85"/>
+            <span>JPMorgan Chase & Co.</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Monitored and investigated debit and credit card fraud — CNP, counterfeit, account takeover</li>
+            <li>Utilized fraud detection systems including Falcon and Taser</li>
+            <li>Executed preventive actions including card blocking and transaction holds</li>
+            <li>Coordinated with Visa and Mastercard networks on fraud claims and recovery</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Tools & Technologies</p>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="gold-line"></div>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon">📊</div><div class="skill-name">MS Office Suite</div></div>
+      <div class="skill-card"><div class="skill-icon">🔎</div><div class="skill-name">Fircosoft File Filter (FFF)</div></div>
+      <div class="skill-card"><div class="skill-icon">📨</div><div class="skill-name">Fircosoft Message Filter (FMF)</div></div>
+      <div class="skill-card"><div class="skill-icon">📰</div><div class="skill-name">Moody's RDC</div></div>
+      <div class="skill-card"><div class="skill-icon">🌐</div><div class="skill-name">SWIFT Sanctions Testing (STS)</div></div>
+      <div class="skill-card"><div class="skill-icon">🤖</div><div class="skill-name">Claude AI</div></div>
+      <div class="skill-card"><div class="skill-icon">💬</div><div class="skill-name">ChatGPT</div></div>
+      <div class="skill-card"><div class="skill-icon">🧠</div><div class="skill-name">Microsoft Copilot</div></div>
+      <div class="skill-card"><div class="skill-icon">💳</div><div class="skill-name">Visa Resolve Online (VROL)</div></div>
+      <div class="skill-card"><div class="skill-icon">🛡️</div><div class="skill-name">Falcon Fraud System</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <div class="gold-line"></div>
+        <p class="contact-intro">Whether you need a compliance expert, a screening specialist, or help navigating high-risk merchant onboarding — I'm available for freelance engagements. Reach out and let's discuss how I can help your business.</p>
+        <a href="https://www.linkedin.com/in/thomas-walter-dolon" target="_blank" class="btn-primary" style="display:inline-block">View LinkedIn Profile</a>
+      </div>
+      <div class="contact-items">
+        <a href="tel:+639999961729" class="contact-item">
+          <div class="ci-icon">📱</div>
+          <div><div class="ci-label">Mobile</div><div class="ci-val">+63 999 996 1729</div></div>
+        </a>
+        <a href="mailto:thom.dolon@gmail.com" class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <div><div class="ci-label">Email</div><div class="ci-val">thom.dolon@gmail.com</div></div>
+        </a>
+        <a href="mailto:dolonthomaswalter@gmail.com" class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <div><div class="ci-label">Alt Email</div><div class="ci-val">dolonthomaswalter@gmail.com</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/thomas-walter-dolon" target="_blank" class="contact-item">
+          <div class="ci-icon">💼</div>
+          <div><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/thomas-walter-dolon</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <span>Thomas Walter Dolon</span> · Fintech & Compliance Specialist · Philippines</p>
+</footer>
+
+</body>
+</html>
