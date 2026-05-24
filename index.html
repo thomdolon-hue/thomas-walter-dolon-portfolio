@@ -4,171 +4,251 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Thomas Walter Dolon | Fintech & Compliance Specialist</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DH4MK7YNYN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DH4MK7YNYN');
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow+Condensed:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --navy:#0a1628;--navy2:#0f2040;--navy3:#162952;
-  --gold:#c9a84c;--gold2:#e8c96a;--gold3:#f5e0a0;
-  --text:#e8edf5;--text2:#a8b4c8;--text3:#6b7a94;
-  --card:#131f35;--card2:#1a2840;
-  --border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.3);
+  --black:#080a0d;--dark:#0d1117;--dark2:#111820;--dark3:#161e28;
+  --steel:#1e2a38;--steel2:#243344;
+  --red:#c0392b;--red2:#e74c3c;--red3:#ff6b57;
+  --slate:#8fa3b8;--slate2:#b0c4d8;--slate3:#d0dce8;
+  --text:#e8ecf0;--text2:#98aab8;--text3:#5a6e7e;
+  --border:rgba(192,57,43,0.2);--border2:rgba(192,57,43,0.4);
+  --grid:rgba(255,255,255,0.02);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--text);line-height:1.6}
+body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--text);line-height:1.6;overflow-x:hidden}
+
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px}
+
+/* GRID OVERLAY */
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 2rem}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo{font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:0.5px}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{color:var(--text2);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s}
-.nav-links a:hover{color:var(--gold)}
-
-/* SECTIONS */
-section{padding:6rem 2rem}
-.container{max-width:1100px;margin:0 auto}
-.section-label{font-size:0.75rem;font-weight:600;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:0.75rem}
-.section-title{font-size:2rem;font-weight:700;color:var(--text);margin-bottom:1rem}
-.gold-line{width:48px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;margin-bottom:2.5rem}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,10,13,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05);padding:0 2.5rem}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:4px;color:#fff}
+.nav-logo span{color:var(--red2)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{color:var(--text3);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--red2)}
+.nav-cta{background:var(--red)!important;color:#fff!important;padding:0.45rem 1.4rem;font-family:'Barlow Condensed',sans-serif;font-size:0.82rem!important;letter-spacing:2px!important;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background 0.2s!important}
+.nav-cta:hover{background:var(--red2)!important;color:#fff!important}
 
 /* HERO */
-#hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 50%,var(--navy3) 100%);position:relative;overflow:hidden}
-#hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%)}
-#hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.04) 0%,transparent 70%)}
-.hero-content{max-width:1100px;margin:0 auto;width:100%}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.1);border:1px solid var(--border2);border-radius:20px;padding:6px 16px;font-size:0.8rem;color:var(--gold2);margin-bottom:1.5rem;font-weight:500}
-.hero-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-h1.hero-name{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;line-height:1.1;margin-bottom:0.5rem;color:#fff}
-h1.hero-name span{color:var(--gold)}
-.hero-title{font-size:1.15rem;color:var(--text2);margin-bottom:1.5rem;font-weight:400}
-.hero-desc{max-width:580px;color:var(--text2);font-size:0.95rem;line-height:1.8;margin-bottom:2.5rem}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:0.75rem 1.75rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:opacity 0.2s,transform 0.2s}
-.btn-primary:hover{opacity:0.9;transform:translateY(-1px)}
-.btn-outline{border:1px solid var(--border2);color:var(--gold);padding:0.75rem 1.75rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.2s}
-.btn-outline:hover{background:rgba(201,168,76,0.08);transform:translateY(-1px)}
-.hero-stats{display:flex;gap:3rem;margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--border)}
-.stat-num{font-size:2rem;font-weight:700;color:var(--gold)}
-.stat-label{font-size:0.8rem;color:var(--text3);margin-top:2px}
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;position:relative;overflow:hidden;background:var(--black)}
+.hero-accent{position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,transparent 30%,rgba(192,57,43,0.04) 100%);pointer-events:none}
+.hero-accent2{position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--red),transparent)}
+.hero-scanline{position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.03) 3px,rgba(0,0,0,0.03) 4px);pointer-events:none}
+.hero-counter{position:absolute;right:3rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1rem;opacity:0.15}
+.hero-counter span{font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red2);letter-spacing:2px;writing-mode:vertical-rl}
+.hero-content{max-width:1200px;margin:0 auto;width:100%;padding:0 2.5rem;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--red2);letter-spacing:3px;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.6s 0.2s forwards}
+.hero-tag::before{content:'';width:24px;height:1px;background:var(--red2)}
+.hero-tag::after{content:'';width:24px;height:1px;background:var(--red2)}
+h1.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,12vw,11rem);line-height:0.9;letter-spacing:4px;color:#fff;margin-bottom:0.5rem;opacity:0;animation:fadeUp 0.6s 0.4s forwards}
+h1.hero-name .accent{color:var(--red2);display:block}
+.hero-divider{display:flex;align-items:center;gap:1rem;margin:1.5rem 0;opacity:0;animation:fadeUp 0.6s 0.6s forwards}
+.hero-divider::before,.hero-divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.08)}
+.hero-divider span{font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--text3);letter-spacing:3px;white-space:nowrap}
+.hero-desc{max-width:560px;color:var(--text2);font-size:0.95rem;line-height:1.9;margin-bottom:2.5rem;font-weight:300;opacity:0;animation:fadeUp 0.6s 0.8s forwards}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp 0.6s 1s forwards}
+.btn-primary{background:var(--red);color:#fff;padding:0.85rem 2.5rem;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:2.5px;text-transform:uppercase;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background 0.2s,transform 0.2s;display:inline-block}
+.btn-primary:hover{background:var(--red2);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.12);color:var(--slate2);padding:0.85rem 2.5rem;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.9rem;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.2s;display:inline-block}
+.btn-ghost:hover{border-color:var(--red);color:var(--red2)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:0;margin-top:4rem;opacity:0;animation:fadeUp 0.6s 1.2s forwards;width:fit-content}
+.stat{padding:1.5rem 3rem 1.5rem 0;border-right:1px solid rgba(255,255,255,0.06);margin-right:3rem}
+.stat:last-child{border-right:none;margin-right:0}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:2px;color:#fff;line-height:1}
+.stat-num span{color:var(--red2)}
+.stat-label{font-family:'Share Tech Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTION BASE */
+section{padding:7rem 2.5rem;position:relative;z-index:1}
+.container{max-width:1200px;margin:0 auto}
+.section-tag{font-family:'Share Tech Mono',monospace;font-size:0.68rem;letter-spacing:3px;color:var(--red2);text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem}
+.section-tag::before{content:'//';opacity:0.5}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:3px;color:#fff;line-height:1;margin-bottom:0.5rem}
+.section-title span{color:var(--red2)}
+.rule{width:48px;height:2px;background:var(--red);margin-bottom:3.5rem}
 
 /* ABOUT */
-#about{background:var(--navy2)}
-.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start}
-.about-avatar{width:100%;aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,var(--card) 0%,var(--card2) 100%);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:5rem;font-weight:700;color:var(--gold);letter-spacing:-2px}
-.about-text p{color:var(--text2);font-size:0.95rem;line-height:1.9;margin-bottom:1rem}
-.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem}
-.tag{background:rgba(201,168,76,0.08);border:1px solid var(--border);color:var(--gold2);padding:5px 14px;border-radius:20px;font-size:0.78rem;font-weight:500}
+#about{background:var(--dark)}
+.about-grid{display:grid;grid-template-columns:1fr 1.7fr;gap:5rem;align-items:start}
+.about-img-wrap{position:relative}
+.img-frame{position:absolute;top:-10px;left:-10px;right:10px;bottom:10px;border:1px solid var(--border2);z-index:0;pointer-events:none}
+.img-frame::before{content:'TWD';position:absolute;bottom:-1px;right:-1px;font-family:'Bebas Neue',sans-serif;font-size:0.7rem;letter-spacing:3px;color:var(--red);background:var(--dark);padding:2px 6px}
+.about-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;position:relative;z-index:1;filter:grayscale(20%) contrast(1.05)}
+.about-placeholder{width:100%;aspect-ratio:4/5;background:var(--steel);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:5rem;color:var(--red);letter-spacing:4px;position:relative;z-index:1}
+.about-body p{color:var(--text2);font-size:0.93rem;line-height:1.95;margin-bottom:1rem;font-weight:300}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.75rem}
+.tag{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:5px 14px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:all 0.2s;cursor:default}
+.tag:hover{border-color:var(--red);color:var(--red2)}
 
 /* SERVICES */
-#services{background:var(--navy)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.service-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;transition:border-color 0.3s,transform 0.2s;position:relative;overflow:hidden}
-.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));opacity:0;transition:opacity 0.3s}
-.service-card:hover{border-color:var(--border2);transform:translateY(-4px)}
-.service-card:hover::before{opacity:1}
-.service-icon{width:48px;height:48px;border-radius:12px;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:1.4rem}
-.service-card h3{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.75rem}
-.service-card p{font-size:0.85rem;color:var(--text2);line-height:1.8}
-.service-exp{display:inline-block;margin-top:1rem;font-size:0.75rem;color:var(--gold);background:rgba(201,168,76,0.08);padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
+#services{background:var(--black)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.04)}
+.service-card{background:var(--dark);padding:2.5rem;position:relative;overflow:hidden;transition:background 0.3s;cursor:default}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--red);transition:height 0.4s}
+.service-card:hover{background:var(--dark2)}
+.service-card:hover::before{height:100%}
+.svc-num{font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red);letter-spacing:3px;margin-bottom:1.25rem;opacity:0.7}
+.svc-title{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:1.5px;color:#fff;text-transform:uppercase;margin-bottom:1rem;line-height:1.2}
+.svc-desc{font-size:0.85rem;color:var(--text2);line-height:1.85;font-weight:300}
+.svc-badge{display:inline-flex;align-items:center;gap:6px;margin-top:1.5rem;font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red2);letter-spacing:1px}
+.svc-badge::before{content:'▶';font-size:0.5rem}
 
 /* EXPERIENCE */
-#experience{background:var(--navy2)}
-.timeline{position:relative;padding-left:2rem}
-.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),transparent)}
-.timeline-item{position:relative;margin-bottom:2.5rem}
-.timeline-item::before{content:'';position:absolute;left:-2.35rem;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--navy2);box-shadow:0 0 0 3px rgba(201,168,76,0.2)}
-.timeline-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem}
-.timeline-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:start;gap:0.5rem;margin-bottom:0.75rem}
-.timeline-role{font-size:1rem;font-weight:600;color:var(--text)}
-.timeline-period{font-size:0.8rem;color:var(--gold2);background:rgba(201,168,76,0.08);padding:3px 10px;border-radius:10px;white-space:nowrap}
-.timeline-company{font-size:0.85rem;color:var(--gold);margin-bottom:1rem;font-weight:500}
-.timeline-bullets{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
-.timeline-bullets li{font-size:0.85rem;color:var(--text2);padding-left:1rem;position:relative;line-height:1.7}
-.timeline-bullets li::before{content:'›';position:absolute;left:0;color:var(--gold)}
+#experience{background:var(--dark2)}
+.timeline{position:relative;padding-left:1.5rem}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--red),rgba(192,57,43,0.1))}
+.t-item{position:relative;margin-bottom:2rem}
+.t-item::before{content:'';position:absolute;left:-1.85rem;top:10px;width:10px;height:10px;background:var(--dark2);border:1px solid var(--red);transform:rotate(45deg);transition:background 0.3s}
+.t-item:hover::before{background:var(--red)}
+.t-card{background:var(--dark);border:1px solid rgba(255,255,255,0.05);border-left:2px solid transparent;padding:1.75rem;transition:border-left-color 0.3s,transform 0.2s}
+.t-card:hover{border-left-color:var(--red);transform:translateX(6px)}
+.t-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:0.75rem;margin-bottom:0.5rem}
+.t-role{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase}
+.t-period{font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red2);padding:3px 10px;border:1px solid var(--border);letter-spacing:1px}
+.t-company{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;color:var(--red2);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.1rem;opacity:0.85}
+.t-bullets{list-style:none;display:flex;flex-direction:column;gap:0.4rem}
+.t-bullets li{font-size:0.83rem;color:var(--text2);padding-left:1.25rem;position:relative;line-height:1.75;font-weight:300}
+.t-bullets li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--red);opacity:0.7}
 
 /* SKILLS */
-#skills{background:var(--navy)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
-.skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.3s}
-.skill-card:hover{border-color:var(--border2)}
-.skill-icon{font-size:1.5rem;width:40px;text-align:center;flex-shrink:0}
-.skill-name{font-size:0.85rem;font-weight:500;color:var(--text)}
+#skills{background:var(--black)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:rgba(255,255,255,0.03)}
+.skill-card{background:var(--dark);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:background 0.2s,border-left 0.2s;border-left:2px solid transparent}
+.skill-card:hover{background:var(--dark2);border-left-color:var(--red)}
+.skill-icon{font-size:1.2rem;width:32px;text-align:center;flex-shrink:0;opacity:0.85}
+.skill-name{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:1px;color:var(--slate2);text-transform:uppercase}
 
 /* CONTACT */
-#contact{background:var(--navy2)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.contact-intro{font-size:0.95rem;color:var(--text2);line-height:1.9;margin-bottom:2rem}
-.contact-items{display:flex;flex-direction:column;gap:1rem}
-.contact-item{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;text-decoration:none;transition:border-color 0.3s,transform 0.2s;color:inherit}
-.contact-item:hover{border-color:var(--border2);transform:translateX(4px)}
-.ci-icon{width:40px;height:40px;border-radius:10px;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.ci-label{font-size:0.75rem;color:var(--text3);margin-bottom:2px}
-.ci-val{font-size:0.9rem;color:var(--text);font-weight:500}
+#contact{background:var(--dark2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+.contact-intro{font-size:0.92rem;color:var(--text2);line-height:1.95;margin-bottom:2rem;font-weight:300}
+.contact-items{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem}
+.contact-item{display:flex;align-items:center;gap:1rem;background:var(--dark);border:1px solid rgba(255,255,255,0.05);border-left:2px solid transparent;padding:1rem 1.25rem;text-decoration:none;color:inherit;transition:border-left-color 0.2s,transform 0.2s}
+.contact-item:hover{border-left-color:var(--red);transform:translateX(4px)}
+.ci-icon{width:34px;height:34px;background:var(--steel);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
+.ci-label{font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
+.ci-val{font-size:0.85rem;color:var(--text);font-weight:400}
+.form-wrap{background:var(--dark);border:1px solid rgba(255,255,255,0.05);padding:2rem;border-top:2px solid var(--red)}
+.form-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:3px;color:#fff;margin-bottom:1.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:1rem}
+.fg label{font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.15);padding:0.65rem 0.9rem;color:var(--text);font-size:0.85rem;font-family:'Barlow',sans-serif;outline:none;transition:border-color 0.2s;border-radius:0}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red);border-bottom-color:var(--red2)}
+.fg select option{background:var(--dark2)}
+.fg textarea{resize:vertical;font-family:'Barlow',sans-serif}
+.btn-submit{background:var(--red);color:#fff;padding:0.9rem 2rem;border:none;font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;width:100%;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background 0.2s}
+.btn-submit:hover{background:var(--red2)}
+#form-status{font-family:'Share Tech Mono',monospace;font-size:0.75rem;text-align:center;margin-top:0.75rem;display:none;letter-spacing:1px}
 
 /* FOOTER */
-footer{background:var(--navy);border-top:1px solid var(--border);padding:2rem;text-align:center}
-footer p{font-size:0.8rem;color:var(--text3)}
-footer span{color:var(--gold)}
+footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.04);padding:2rem 2.5rem;position:relative;z-index:1}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--text3);letter-spacing:1px}
+footer span{color:var(--red2)}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:4px;color:rgba(255,255,255,0.15)}
 
-/* RESPONSIVE */
-@media(max-width:768px){
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+
+@media(max-width:900px){
   .about-grid,.contact-grid{grid-template-columns:1fr}
-  .about-avatar{max-width:200px}
-  .hero-stats{gap:2rem}
+  .services-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(3,auto)}
+  .form-row{grid-template-columns:1fr}
   .nav-links{display:none}
+  .footer-inner{flex-direction:column;text-align:center}
 }
 </style>
 </head>
 <body>
 
-<nav>
+<nav id="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">TWD</div>
+    <div class="nav-logo">T<span>.</span>W<span>.</span>D</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
     </ul>
-    <a href="#contact" class="btn-primary" style="padding:0.5rem 1.25rem;font-size:0.82rem">Hire Me</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
-  <div class="container hero-content">
-    <div class="hero-badge">Available for Freelance Work</div>
-    <h1 class="hero-name">Thomas Walter<br><span>Dolon</span></h1>
-    <p class="hero-title">Fintech · Compliance · Payments Specialist</p>
-    <p class="hero-desc">10+ years of experience in global banking and financial compliance. Specialized in sanctions screening, fraud prevention, chargebacks, and high-risk merchant onboarding. Former JPMorgan Chase professional now offering expert freelance services.</p>
+  <div class="hero-accent"></div>
+  <div class="hero-accent2"></div>
+  <div class="hero-scanline"></div>
+  <div class="hero-content">
+    <div class="hero-tag">FINTECH · COMPLIANCE · PAYMENTS</div>
+    <h1 class="hero-name">
+      Thomas
+      <span class="accent">Walter Dolon</span>
+    </h1>
+    <div class="hero-divider"><span>SANCTIONS · FRAUD · CHARGEBACKS · ONBOARDING</span></div>
+    <p class="hero-desc">A decade of financial crime compliance at JPMorgan Chase & Co. Bringing institutional-grade expertise in sanctions screening, fraud detection, and high-risk merchant onboarding — now available as a freelance specialist.</p>
     <div class="hero-btns">
-      <a href="#services" class="btn-primary">View My Services</a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
+      <a href="#services" class="btn-primary">View Services</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
-      <div><div class="stat-num">4</div><div class="stat-label">Core Specializations</div></div>
-      <div><div class="stat-num">JPM</div><div class="stat-label">Former Employer</div></div>
+      <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Years Experience</div></div>
+      <div class="stat"><div class="stat-num">04</div><div class="stat-label">Specializations</div></div>
+      <div class="stat"><div class="stat-num"><span>JPM</span></div><div class="stat-label">Former Employer</div></div>
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="about-grid">
-      <div>
-        <img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/about%20me%20v3.png" alt="Thomas Walter Dolon" class="about-avatar" style="object-fit:cover;width:100%;border-radius:16px;border:1px solid var(--border2)"/>
+      <div class="reveal-left">
+        <div class="about-img-wrap">
+          <div class="img-frame"></div>
+          <img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/about%20me%20v3.png" alt="Thomas Walter Dolon" class="about-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="about-placeholder" style="display:none">TWD</div>
+        </div>
       </div>
       <div>
-        <p class="section-label">About Me</p>
-        <h2 class="section-title">Compliance & Payments Professional</h2>
-        <div class="gold-line"></div>
-        <p class="about-text"><p>I'm a seasoned fintech and compliance specialist with over a decade of hands-on experience at JPMorgan Chase & Co. My career spans fraud prevention, chargeback management, sanctions screening (name & transaction), and financial crime compliance.</p></p>
-        <p class="about-text"><p>Today, I offer my deep expertise as a freelancer — helping businesses navigate complex compliance requirements, secure payment processing, and build robust screening and risk management workflows.</p></p>
-        <div class="about-tags">
+        <p class="section-tag reveal">About Me</p>
+        <h2 class="section-title reveal reveal-delay-1">COMPLIANCE &<br><span>PAYMENTS</span> PRO</h2>
+        <div class="rule reveal reveal-delay-2"></div>
+        <div class="reveal reveal-delay-2">
+          <p>I'm a seasoned fintech and compliance specialist with over a decade of hands-on experience at JPMorgan Chase & Co. My career spans fraud prevention, chargeback management, name and transaction sanctions screening, and financial crime compliance at a global scale.</p>
+          <p>Today, I offer my deep institutional expertise as a freelancer — helping businesses navigate complex compliance requirements, secure payment processing, and build robust risk management workflows.</p>
+        </div>
+        <div class="about-tags reveal reveal-delay-3">
           <span class="tag">Sanctions Screening</span>
           <span class="tag">Fraud Prevention</span>
           <span class="tag">Chargebacks</span>
@@ -183,60 +263,57 @@ footer span{color:var(--gold)}
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
   <div class="container">
-    <p class="section-label">What I Offer</p>
-    <h2 class="section-title">Freelance Services</h2>
-    <div class="gold-line"></div>
-    <div class="services-grid">
-
+    <p class="section-tag reveal">What I Offer</p>
+    <h2 class="section-title reveal reveal-delay-1">FREELANCE <span>SERVICES</span></h2>
+    <div class="rule reveal reveal-delay-2"></div>
+    <div class="services-grid reveal reveal-delay-2">
       <div class="service-card">
-        <div class="service-icon">🏦</div>
-        <h3>Onboarding Specialist</h3>
-        <p>I help high-risk merchants secure their payment processing infrastructure — including outreach to PSPs, acquirers, ISOs, EMIs, and payment gateways. I assist with KYC/KYB documentation, compliance communication, and email management throughout the onboarding process.</p>
-        <span class="service-exp">3 months experience</span>
+        <div class="svc-num">// 01</div>
+        <div class="svc-title">Onboarding Specialist</div>
+        <p class="svc-desc">I help high-risk merchants secure payment processing infrastructure — including outreach to PSPs, acquirers, ISOs, EMIs, and payment gateways. I assist with KYC/KYB documentation, compliance communication, and correspondence throughout the onboarding process.</p>
+        <div class="svc-badge">Current Role · 3 mos exp</div>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">🔍</div>
-        <h3>Screening Testing & Optimization</h3>
-        <p>End-to-end testing of Name and Transaction Screening systems using Fircosoft Classics and SWIFT STS feeds. I analyze screening outcomes, evaluate matching thresholds, conduct adverse media validation via Moody's RDC, and provide actionable recommendations to reduce false positives and improve regulatory accuracy.</p>
-        <span class="service-exp">2 years experience</span>
+        <div class="svc-num">// 02</div>
+        <div class="svc-title">Screening Testing & Optimization</div>
+        <p class="svc-desc">End-to-end testing of Name and Transaction Screening systems using Fircosoft Classics and SWIFT STS feeds. I analyze screening outcomes, evaluate matching thresholds, conduct adverse media validation via Moody's RDC, and reduce false positives through systematic optimization.</p>
+        <div class="svc-badge">2 yrs exp · ING Hubs PH</div>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">🛡️</div>
-        <h3>Alert Handling – Name & Transaction Screening</h3>
-        <p>Senior-level review and disposition of sanctions alerts using Fircosoft FFF and FMF. I investigate OFAC, EU, and UN sanctions list matches, interpret SWIFT and SEPA payment messages, apply fuzzy match logic, and escalate confirmed risks with full audit-ready documentation.</p>
-        <span class="service-exp">4+ years experience</span>
+        <div class="svc-num">// 03</div>
+        <div class="svc-title">Alert Handling — Name & Transaction Screening</div>
+        <p class="svc-desc">Senior-level review and disposition of sanctions alerts using Fircosoft FFF and FMF. OFAC, EU, and UN sanctions list investigation, SWIFT and SEPA payment message interpretation, fuzzy match logic analysis, and full audit-ready documentation.</p>
+        <div class="svc-badge">4+ yrs exp · JPMorgan Chase</div>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Chargeback & Fraud Specialist</h3>
-        <p>End-to-end chargeback and representment management under Visa and Mastercard frameworks using VROL and MCDF. Fraud investigation across CNP, counterfeit, and account takeover scenarios using Falcon and Taser systems, with full case documentation for audit and recovery tracking.</p>
-        <span class="service-exp">8+ years experience</span>
+        <div class="svc-num">// 04</div>
+        <div class="svc-title">Chargeback & Fraud Specialist</div>
+        <p class="svc-desc">End-to-end chargeback and representment management under Visa and Mastercard frameworks via VROL and MCDF. Fraud investigation across CNP, counterfeit, and account takeover scenarios using Falcon and Taser, with full case documentation for audit and recovery tracking.</p>
+        <div class="svc-badge">8+ yrs exp · JPMorgan Chase</div>
       </div>
-
     </div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
-    <p class="section-label">Career History</p>
-    <h2 class="section-title">Professional Experience</h2>
-    <div class="gold-line"></div>
+    <p class="section-tag reveal">Career History</p>
+    <h2 class="section-title reveal reveal-delay-1">PROFESSIONAL <span>EXPERIENCE</span></h2>
+    <div class="rule reveal reveal-delay-2"></div>
     <div class="timeline">
 
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Onboarding Specialist</span>
-            <span class="timeline-period" style="background:rgba(201,168,76,0.18);color:var(--gold)">2026 – Present 🟢</span>
+      <div class="t-item reveal">
+        <div class="t-card">
+          <div class="t-header">
+            <span class="t-role">Onboarding Specialist</span>
+            <span class="t-period">2026 – PRESENT 🟢</span>
           </div>
-          <div class="timeline-company">Freelance / Independent</div>
-          <ul class="timeline-bullets">
+          <div class="t-company">Freelance / Independent</div>
+          <ul class="t-bullets">
             <li>Helping high-risk merchants secure payment processing solutions</li>
             <li>Outreach to PSPs, acquirers, ISOs, EMIs, and payment gateways on behalf of clients</li>
             <li>Guiding merchants through KYC/KYB documentation and compliance requirements</li>
@@ -245,14 +322,14 @@ footer span{color:var(--gold)}
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Screening Testing & Optimization Expert</span>
-            <span class="timeline-period">Apr 2024 – Mar 2026</span>
+      <div class="t-item reveal">
+        <div class="t-card">
+          <div class="t-header">
+            <span class="t-role">Screening Testing & Optimization Expert</span>
+            <span class="t-period">Apr 2024 – Mar 2026</span>
           </div>
-          <div class="timeline-company">ING Hubs Philippines</div>
-          <ul class="timeline-bullets">
+          <div class="t-company">ING Hubs Philippines</div>
+          <ul class="t-bullets">
             <li>End-to-end testing of Name and Transaction Screening systems using Fircosoft Classics</li>
             <li>Generated fuzzy name variations using SWIFT Sanctions Testing Service (STS) feeds</li>
             <li>Evaluated matching thresholds, scoring behavior, and algorithm logic for optimization</li>
@@ -262,14 +339,14 @@ footer span{color:var(--gold)}
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Senior Alert Handler – Name & Transaction Screening</span>
-            <span class="timeline-period">Mar 2020 – Apr 2024</span>
+      <div class="t-item reveal">
+        <div class="t-card">
+          <div class="t-header">
+            <span class="t-role">Senior Alert Handler – Name & Transaction Screening</span>
+            <span class="t-period">Mar 2020 – Apr 2024</span>
           </div>
-          <div class="timeline-company">JPMorgan Chase & Co. · Philippines</div>
-          <ul class="timeline-bullets">
+          <div class="t-company">JPMorgan Chase & Co. · Philippines</div>
+          <ul class="t-bullets">
             <li>Reviewed and dispositioned screening alerts using Fircosoft FFF and FMF</li>
             <li>Investigated potential matches against OFAC, EU, and UN sanctions lists</li>
             <li>Interpreted SWIFT and SEPA payment messages for sanctions exposure assessment</li>
@@ -279,14 +356,14 @@ footer span{color:var(--gold)}
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Chargeback & Representment Senior Specialist I</span>
-            <span class="timeline-period">Aug 2014 – Mar 2020</span>
+      <div class="t-item reveal">
+        <div class="t-card">
+          <div class="t-header">
+            <span class="t-role">Chargeback & Representment Senior Specialist I</span>
+            <span class="t-period">Aug 2014 – Mar 2020</span>
           </div>
-          <div class="timeline-company">JPMorgan Chase & Co. · Metro Manila</div>
-          <ul class="timeline-bullets">
+          <div class="t-company">JPMorgan Chase & Co. · Metro Manila</div>
+          <ul class="t-bullets">
             <li>Managed end-to-end chargeback and representment lifecycle under Visa and Mastercard frameworks</li>
             <li>Handled disputes via Visa Resolve Online (VROL) and Mastercard Dispute Form (MCDF)</li>
             <li>Prepared structured evidence packages aligned with card scheme requirements</li>
@@ -295,14 +372,14 @@ footer span{color:var(--gold)}
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <span class="timeline-role">Fraud Prevention Specialist III</span>
-            <span class="timeline-period">May 2012 – Aug 2014</span>
+      <div class="t-item reveal">
+        <div class="t-card">
+          <div class="t-header">
+            <span class="t-role">Fraud Prevention Specialist III</span>
+            <span class="t-period">May 2012 – Aug 2014</span>
           </div>
-          <div class="timeline-company">JPMorgan Chase & Co.</div>
-          <ul class="timeline-bullets">
+          <div class="t-company">JPMorgan Chase & Co.</div>
+          <ul class="t-bullets">
             <li>Monitored and investigated debit and credit card fraud — CNP, counterfeit, account takeover</li>
             <li>Utilized fraud detection systems including Falcon and Taser</li>
             <li>Executed preventive actions including card blocking and transaction holds</li>
@@ -315,38 +392,37 @@ footer span{color:var(--gold)}
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="container">
-    <p class="section-label">Tools & Technologies</p>
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="gold-line"></div>
-    <div class="skills-grid">
+    <p class="section-tag reveal" style="color:var(--red2)">Tools & Technologies</p>
+    <h2 class="section-title reveal reveal-delay-1">TECHNICAL <span>SKILLS</span></h2>
+    <div class="rule reveal reveal-delay-2"></div>
+    <div class="skills-grid reveal reveal-delay-2">
       <div class="skill-card"><div class="skill-icon">📊</div><div class="skill-name">MS Office Suite</div></div>
-      <div class="skill-card"><div class="skill-icon">🔎</div><div class="skill-name">Fircosoft File Filter (FFF)</div></div>
-      <div class="skill-card"><div class="skill-icon">📨</div><div class="skill-name">Fircosoft Message Filter (FMF)</div></div>
+      <div class="skill-card"><div class="skill-icon">🔎</div><div class="skill-name">Fircosoft File Filter</div></div>
+      <div class="skill-card"><div class="skill-icon">📨</div><div class="skill-name">Fircosoft Msg Filter</div></div>
       <div class="skill-card"><div class="skill-icon">📰</div><div class="skill-name">Moody's RDC</div></div>
-      <div class="skill-card"><div class="skill-icon">🌐</div><div class="skill-name">SWIFT Sanctions Testing (STS)</div></div>
+      <div class="skill-card"><div class="skill-icon">🌐</div><div class="skill-name">SWIFT STS</div></div>
       <div class="skill-card"><div class="skill-icon">🤖</div><div class="skill-name">Claude AI</div></div>
       <div class="skill-card"><div class="skill-icon">💬</div><div class="skill-name">ChatGPT</div></div>
-      <div class="skill-card"><div class="skill-icon">🧠</div><div class="skill-name">Microsoft Copilot</div></div>
-      <div class="skill-card"><div class="skill-icon">💳</div><div class="skill-name">Visa Resolve Online (VROL)</div></div>
+      <div class="skill-card"><div class="skill-icon">🧠</div><div class="skill-name">MS Copilot</div></div>
+      <div class="skill-card"><div class="skill-icon">💳</div><div class="skill-name">Visa Resolve Online</div></div>
       <div class="skill-card"><div class="skill-icon">🛡️</div><div class="skill-name">Falcon Fraud System</div></div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="contact-grid">
       <div>
-        <p class="section-label">Get in Touch</p>
-        <h2 class="section-title">Let's Work Together</h2>
-        <div class="gold-line"></div>
-        <p class="contact-intro">Whether you need a compliance expert, a screening specialist, or help navigating high-risk merchant onboarding — I'm available for freelance engagements. Reach out and let's discuss how I can help your business.</p>
-        <a href="https://www.linkedin.com/in/thomas-walter-dolon" target="_blank" class="btn-primary" style="display:inline-block">View LinkedIn Profile</a>
-      </div>
-      <div>
-        <div class="contact-items" style="margin-bottom:1.5rem">
+        <p class="section-tag reveal">Get in Touch</p>
+        <h2 class="section-title reveal reveal-delay-1">LET'S WORK <span>TOGETHER</span></h2>
+        <div class="rule reveal reveal-delay-2"></div>
+        <p class="contact-intro reveal reveal-delay-2">Whether you need a compliance expert, a screening specialist, or help navigating high-risk merchant onboarding — I'm available for freelance engagements. Reach out and let's talk.</p>
+        <div class="contact-items reveal reveal-delay-3">
           <a href="tel:+639999961729" class="contact-item">
             <div class="ci-icon">📱</div>
             <div><div class="ci-label">Mobile</div><div class="ci-val">+63 999 996 1729</div></div>
@@ -364,22 +440,25 @@ footer span{color:var(--gold)}
             <div><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/thomas-walter-dolon</div></div>
           </a>
         </div>
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem">
-          <h3 style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:1.25rem">Send an Inquiry</h3>
-          <form id="contact-form" action="https://formspree.io/f/xvzypbwb" method="POST" style="display:flex;flex-direction:column;gap:1rem">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-              <div>
-                <label style="font-size:0.75rem;color:var(--text3);display:block;margin-bottom:6px">Full Name</label>
-                <input type="text" name="name" required placeholder="Your name" style="width:100%;background:var(--navy);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.9rem;color:var(--text);font-size:0.875rem;outline:none"/>
+        <a href="https://www.linkedin.com/in/thomas-walter-dolon" target="_blank" class="btn-primary" style="margin-top:0.5rem">View LinkedIn</a>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="form-wrap">
+          <div class="form-title">SEND AN INQUIRY</div>
+          <form id="contact-form" action="https://formspree.io/f/xvzypbwb" method="POST">
+            <div class="form-row">
+              <div class="fg">
+                <label>Full Name</label>
+                <input type="text" name="name" required placeholder="Your name"/>
               </div>
-              <div>
-                <label style="font-size:0.75rem;color:var(--text3);display:block;margin-bottom:6px">Email Address</label>
-                <input type="email" name="email" required placeholder="your@email.com" style="width:100%;background:var(--navy);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.9rem;color:var(--text);font-size:0.875rem;outline:none"/>
+              <div class="fg">
+                <label>Email Address</label>
+                <input type="email" name="email" required placeholder="your@email.com"/>
               </div>
             </div>
-            <div>
-              <label style="font-size:0.75rem;color:var(--text3);display:block;margin-bottom:6px">Service Needed</label>
-              <select name="service" style="width:100%;background:var(--navy);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.9rem;color:var(--text);font-size:0.875rem;outline:none">
+            <div class="fg">
+              <label>Service Needed</label>
+              <select name="service">
                 <option value="">Select a service...</option>
                 <option>Onboarding Specialist</option>
                 <option>Screening Testing & Optimization</option>
@@ -388,12 +467,12 @@ footer span{color:var(--gold)}
                 <option>Other</option>
               </select>
             </div>
-            <div>
-              <label style="font-size:0.75rem;color:var(--text3);display:block;margin-bottom:6px">Message</label>
-              <textarea name="message" required rows="4" placeholder="Tell me about your project or inquiry..." style="width:100%;background:var(--navy);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.9rem;color:var(--text);font-size:0.875rem;outline:none;resize:vertical;font-family:inherit"></textarea>
+            <div class="fg">
+              <label>Message</label>
+              <textarea name="message" required rows="5" placeholder="Tell me about your project or inquiry..."></textarea>
             </div>
-            <button type="submit" style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:0.75rem;border-radius:8px;font-weight:600;font-size:0.9rem;border:none;cursor:pointer;transition:opacity 0.2s">Send Message</button>
-            <div id="form-status" style="font-size:0.85rem;text-align:center;display:none"></div>
+            <button type="submit" class="btn-submit">Send Message</button>
+            <div id="form-status"></div>
           </form>
         </div>
       </div>
@@ -402,35 +481,42 @@ footer span{color:var(--gold)}
 </section>
 
 <footer>
-  <p>© 2026 <span>Thomas Walter Dolon</span> · Fintech & Compliance Specialist · Philippines</p>
+  <div class="footer-inner">
+    <div class="footer-logo">TWD</div>
+    <p>© 2026 <span>Thomas Walter Dolon</span> · Fintech & Compliance Specialist · Philippines</p>
+    <p style="color:var(--text3)">Available for Freelance</p>
+  </div>
 </footer>
 
 <script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').style.borderBottomColor = window.scrollY > 40 ? 'rgba(192,57,43,0.2)' : 'rgba(255,255,255,0.05)';
+});
+
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:0.1});
+document.querySelectorAll('.reveal,.reveal-left').forEach(el=>obs.observe(el));
+
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
-form.addEventListener('submit', async function(e) {
+form.addEventListener('submit', async function(e){
   e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending...';
-  btn.style.opacity = '0.7';
-  const data = new FormData(form);
-  try {
-    const res = await fetch(form.action, {method:'POST', body:data, headers:{Accept:'application/json'}});
-    if (res.ok) {
-      status.style.display = 'block';
-      status.style.color = 'var(--gold)';
-      status.textContent = '✅ Message sent! I\'ll get back to you soon.';
+  const btn = form.querySelector('.btn-submit');
+  btn.textContent = 'TRANSMITTING...';
+  btn.style.opacity = '0.6';
+  try{
+    const res = await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(res.ok){
+      status.style.display='block';status.style.color='var(--red2)';
+      status.textContent='// MESSAGE SENT. I\'LL BE IN TOUCH SOON.';
       form.reset();
-    } else {
-      throw new Error();
-    }
-  } catch {
-    status.style.display = 'block';
-    status.style.color = '#e24b4a';
-    status.textContent = '❌ Something went wrong. Please email me directly.';
+    } else throw new Error();
+  } catch{
+    status.style.display='block';status.style.color='#e74c3c';
+    status.textContent='// ERROR. PLEASE EMAIL ME DIRECTLY.';
   }
-  btn.textContent = 'Send Message';
-  btn.style.opacity = '1';
+  btn.textContent='SEND MESSAGE';btn.style.opacity='1';
 });
 </script>
 </body>
