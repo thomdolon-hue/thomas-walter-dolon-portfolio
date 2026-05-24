@@ -136,8 +136,9 @@ section{padding:7rem 2.5rem;position:relative;z-index:1}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:rgba(255,255,255,0.03)}
 .skill-card{background:var(--dark);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:background 0.2s,border-left 0.2s;border-left:2px solid transparent}
 .skill-card:hover{background:var(--dark2);border-left-color:var(--red)}
-.skill-icon{font-size:1.2rem;width:32px;text-align:center;flex-shrink:0;opacity:0.85}
-.skill-name{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:1px;color:var(--slate2);text-transform:uppercase}
+.skill-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.skill-icon img{width:36px;height:36px;object-fit:contain}
+.skill-name{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:1px;color:var(--slate2);text-transform:uppercase;line-height:1.2}
 
 /* CONTACT */
 #contact{background:var(--dark2)}
@@ -146,7 +147,8 @@ section{padding:7rem 2.5rem;position:relative;z-index:1}
 .contact-items{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem}
 .contact-item{display:flex;align-items:center;gap:1rem;background:var(--dark);border:1px solid rgba(255,255,255,0.05);border-left:2px solid transparent;padding:1rem 1.25rem;text-decoration:none;color:inherit;transition:border-left-color 0.2s,transform 0.2s}
 .contact-item:hover{border-left-color:var(--red);transform:translateX(4px)}
-.ci-icon{width:34px;height:34px;background:var(--steel);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
+.ci-icon{width:36px;height:36px;background:var(--steel);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.ci-icon img{width:24px;height:24px;object-fit:contain}
 .ci-label{font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
 .ci-val{font-size:0.85rem;color:var(--text);font-weight:400}
 .form-wrap{background:var(--dark);border:1px solid rgba(255,255,255,0.05);padding:2rem;border-top:2px solid var(--red)}
