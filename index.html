@@ -54,8 +54,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,10,13,0.95
 .hero-accent{position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,transparent 30%,rgba(192,57,43,0.04) 100%);pointer-events:none}
 .hero-accent2{position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--red),transparent)}
 .hero-scanline{position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.03) 3px,rgba(0,0,0,0.03) 4px);pointer-events:none}
-.hero-counter{position:absolute;right:3rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1rem;opacity:0.15}
-.hero-counter span{font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red2);letter-spacing:2px;writing-mode:vertical-rl}
 .hero-content{max-width:1200px;margin:0 auto;width:100%;padding:0 2.5rem;position:relative;z-index:1}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--red2);letter-spacing:3px;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.6s 0.2s forwards}
 .hero-tag::before{content:'';width:24px;height:1px;background:var(--red2)}
@@ -72,11 +70,12 @@ h1.hero-name .accent{color:var(--red2);display:block}
 .btn-ghost{border:1px solid rgba(255,255,255,0.12);color:var(--slate2);padding:0.85rem 2.5rem;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.9rem;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.2s;display:inline-block}
 .btn-ghost:hover{border-color:var(--red);color:var(--red2)}
 .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4rem;opacity:0;animation:fadeUp 0.6s 1.2s forwards;width:100%}
-.stat{padding:1.5rem 1.5rem 1.5rem 0;border-right:1px solid rgba(255,255,255,0.06);margin-right:0}
+.stat{padding:1.5rem 1.5rem 1.5rem 0;border-right:1px solid rgba(255,255,255,0.06)}
 .stat:last-child{border-right:none}
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:2px;color:#fff;line-height:1}
 .stat-num span{color:var(--red2)}
-.stat-label{font-family:'Share Tech Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+.stat-num img{display:block;height:20px;max-width:80px;object-fit:contain}
+.stat-label{font-family:'Share Tech Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-top:6px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
 /* SECTION BASE */
@@ -137,9 +136,8 @@ section{padding:7rem 2.5rem;position:relative;z-index:1}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:rgba(255,255,255,0.03)}
 .skill-card{background:var(--dark);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:background 0.2s,border-left 0.2s;border-left:2px solid transparent}
 .skill-card:hover{background:var(--dark2);border-left-color:var(--red)}
-.skill-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.skill-icon img{width:36px;height:36px;object-fit:contain}
-.skill-name{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:1px;color:var(--slate2);text-transform:uppercase;line-height:1.2}
+.skill-icon{font-size:1.2rem;width:32px;text-align:center;flex-shrink:0;opacity:0.85}
+.skill-name{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:1px;color:var(--slate2);text-transform:uppercase}
 
 /* CONTACT */
 #contact{background:var(--dark2)}
@@ -148,7 +146,7 @@ section{padding:7rem 2.5rem;position:relative;z-index:1}
 .contact-items{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem}
 .contact-item{display:flex;align-items:center;gap:1rem;background:var(--dark);border:1px solid rgba(255,255,255,0.05);border-left:2px solid transparent;padding:1rem 1.25rem;text-decoration:none;color:inherit;transition:border-left-color 0.2s,transform 0.2s}
 .contact-item:hover{border-left-color:var(--red);transform:translateX(4px)}
-.ci-icon{width:36px;height:36px;background:var(--steel);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.ci-icon{width:36px;height:36px;background:var(--steel);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;font-size:1rem}
 .ci-icon img{width:24px;height:24px;object-fit:contain}
 .ci-label{font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
 .ci-val{font-size:0.85rem;color:var(--text);font-weight:400}
@@ -184,7 +182,7 @@ footer span{color:var(--red2)}
 @media(max-width:900px){
   .about-grid,.contact-grid{grid-template-columns:1fr}
   .services-grid{grid-template-columns:1fr}
-  .hero-stats{grid-template-columns:repeat(3,auto)}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
   .form-row{grid-template-columns:1fr}
   .nav-links{display:none}
   .footer-inner{flex-direction:column;text-align:center}
@@ -201,6 +199,8 @@ footer span{color:var(--red2)}
       <li><a href="#services">Services</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" class="nav-cta">Hire Me</a></li>
     </ul>
@@ -219,7 +219,7 @@ footer span{color:var(--red2)}
       <span class="accent">Walter Dolon</span>
     </h1>
     <div class="hero-divider"><span>SANCTIONS · FRAUD · CHARGEBACKS · ONBOARDING</span></div>
-    <p class="hero-desc">A decade of financial crime compliance at JPMorgan Chase & Co. Bringing institutional-grade expertise in sanctions screening, fraud detection, and high-risk merchant onboarding — now available as a freelance specialist.</p>
+    <p class="hero-desc">A decade of financial crime compliance at JPMorgan Chase & Co. and ING Hubs Philippines. Bringing institutional-grade expertise in sanctions screening, fraud detection, and high-risk merchant onboarding — now available as a freelance specialist.</p>
     <div class="hero-btns">
       <a href="#services" class="btn-primary">View Services</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
@@ -227,8 +227,8 @@ footer span{color:var(--red2)}
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Years Experience</div></div>
       <div class="stat"><div class="stat-num">04</div><div class="stat-label">Specializations</div></div>
-      <div class="stat"><div class="stat-num"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/jpmorgan-logo.png" alt="JPMorgan Chase" style="height:16px;max-width:70px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.9;vertical-align:middle"/></div><div class="stat-label">Former · JPMC</div></div>
-      <div class="stat"><div class="stat-num"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/ing-logo.jpg" alt="ING" style="height:16px;max-width:70px;object-fit:contain;vertical-align:middle"/></div><div class="stat-label">Former · ING Hubs PH</div></div>
+      <div class="stat"><div class="stat-num"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/jpmorgan-logo.png" alt="JPMorgan Chase" style="filter:brightness(0) invert(1);opacity:0.9"/></div><div class="stat-label">Former · JPMC</div></div>
+      <div class="stat"><div class="stat-num"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/ing-logo.jpg" alt="ING"/></div><div class="stat-label">Former · ING Hubs PH</div></div>
     </div>
   </div>
 </section>
@@ -249,8 +249,9 @@ footer span{color:var(--red2)}
         <h2 class="section-title reveal reveal-delay-1">COMPLIANCE &<br><span>PAYMENTS</span> PRO</h2>
         <div class="rule reveal reveal-delay-2"></div>
         <div class="reveal reveal-delay-2">
-          <p>I'm a seasoned fintech and compliance specialist with over a decade of hands-on experience at JPMorgan Chase & Co. and ING Hubs Philippines. My career spans fraud prevention, chargeback management, name and transaction sanctions screening, and financial crime compliance at a global scale.</p>
-          <p>Today, I offer my deep institutional expertise as a freelancer — helping businesses navigate complex compliance requirements, secure payment processing, and build robust risk management workflows.</p>
+          <p class="about-body">I'm a seasoned fintech and compliance specialist with over a decade of hands-on experience at JPMorgan Chase & Co. and ING Hubs Philippines. My career spans fraud prevention, chargeback management, name and transaction sanctions screening, and financial crime compliance at a global scale.</p>
+          <p class="about-body">Today, I offer my deep institutional expertise as a freelancer — helping businesses navigate complex compliance requirements, secure payment processing, and build robust risk management workflows.</p>
+          <p class="about-body">I also build my own compliance tools — including <a href="https://due-dex.vercel.app" target="_blank" style="color:var(--red2);text-decoration:none;border-bottom:1px solid var(--border2)">DueDex</a>, a KYC/KYB due diligence web app I designed and launched to streamline PSP and merchant vetting.</p>
         </div>
         <div class="about-tags reveal reveal-delay-3">
           <span class="tag">Sanctions Screening</span>
@@ -417,6 +418,72 @@ footer span{color:var(--red2)}
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="background:var(--black)">
+  <div class="container">
+    <p class="section-tag reveal">Client Feedback</p>
+    <h2 class="section-title reveal reveal-delay-1">CLIENT <span>TESTIMONIALS</span></h2>
+    <div class="rule reveal reveal-delay-2"></div>
+    <div class="reveal reveal-delay-2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;background:rgba(255,255,255,0.04)">
+
+      <div style="background:var(--dark);padding:2.5rem;position:relative;border-left:3px solid var(--red)">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:1.25rem">
+          <span style="color:#f1c40f;font-size:1rem">★★★★★</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--red2);margin-left:8px;letter-spacing:1px">5.0 / 5.0</span>
+        </div>
+        <p style="font-size:0.92rem;color:var(--slate2);line-height:1.9;font-style:italic;margin-bottom:1.5rem;font-weight:300">"Thomas is a great onboarding specialist, well versed in KYC, AML and onboarding processes. He is a real tribute to any international team and I'm sure we'll work with him again. Thank you!"</p>
+        <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:1.25rem;margin-bottom:1rem">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem">Project</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;color:#fff;font-weight:600;letter-spacing:0.5px">Onboarding Specialist (KYC/KYB) with Payments Experience</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--text3);letter-spacing:1px;margin-top:4px">Feb 2026 – Jul 2026 · 655 hrs</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">✓ Clear Communicator</span>
+          <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">✓ Accountable for Outcomes</span>
+        </div>
+        <div style="position:absolute;top:1.75rem;right:1.75rem;font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:1px">UPWORK · VERIFIED</div>
+      </div>
+
+    </div>
+    <div class="reveal reveal-delay-3" style="margin-top:1.5rem;display:flex;align-items:center;gap:1rem">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:0.68rem;color:var(--text3);letter-spacing:2px">100% JOB SUCCESS · 4 JOBS COMPLETED · 5.0 RATING</div>
+      <a href="https://www.upwork.com/freelancers/~01494b9eba74aca915" target="_blank" style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;color:var(--red2);letter-spacing:1.5px;text-decoration:none;text-transform:uppercase;border-bottom:1px solid var(--border2)">View Upwork Profile →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="background:var(--dark2)">
+  <div class="container">
+    <p class="section-tag reveal">Built by Me</p>
+    <h2 class="section-title reveal reveal-delay-1">SIDE <span>PROJECTS</span></h2>
+    <div class="rule reveal reveal-delay-2"></div>
+    <div class="reveal reveal-delay-2" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.04)">
+
+      <div style="background:var(--dark);padding:2.5rem;position:relative;overflow:hidden;transition:background 0.3s" onmouseover="this.style.background='var(--dark3)'" onmouseout="this.style.background='var(--dark)'">
+        <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:var(--red)"></div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red);letter-spacing:3px;margin-bottom:1.25rem;opacity:0.7">// TOOL</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:2px;color:#fff;text-transform:uppercase;margin-bottom:0.5rem">DueDex</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:0.68rem;color:var(--red2);letter-spacing:2px;margin-bottom:1.25rem">KYC / KYB DUE DILIGENCE WEB APP</div>
+        <p style="font-size:0.85rem;color:var(--text2);line-height:1.85;font-weight:300;margin-bottom:1.5rem">A compliance tool I designed and built to streamline PSP and merchant due diligence. DueDex automates KYC/KYB vetting workflows, powered by the Groq API — enabling fast, structured screening of payment providers and high-risk merchants across multiple jurisdictions.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.75rem">
+          <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">KYC / KYB</span>
+          <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72px;letter-spacing:1.5px;text-transform:uppercase;font-size:0.72rem">Groq API</span>
+          <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">PSP Vetting</span>
+          <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">Companies House</span>
+        </div>
+        <a href="https://due-dex.vercel.app" target="_blank" class="btn-primary" style="font-size:0.78rem;padding:0.7rem 1.75rem">View Live Tool</a>
+      </div>
+
+      <div style="background:var(--dark);padding:2.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;opacity:0.4">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--text3);letter-spacing:3px;margin-bottom:1rem">// MORE COMING SOON</div>
+        <div style="width:40px;height:1px;background:var(--border);margin:0 auto"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -432,15 +499,15 @@ footer span{color:var(--red2)}
             <div><div class="ci-label">Mobile</div><div class="ci-val">+63 999 996 1729</div></div>
           </a>
           <a href="mailto:thom.dolon@gmail.com" class="contact-item">
-            <div class="ci-icon"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/gmail.jpg" style="height:22px;object-fit:contain"/></div>
+            <div class="ci-icon"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/gmail.jpg" style="width:24px;height:24px;object-fit:contain"/></div>
             <div><div class="ci-label">Email</div><div class="ci-val">thom.dolon@gmail.com</div></div>
           </a>
           <a href="mailto:dolonthomaswalter@gmail.com" class="contact-item">
-            <div class="ci-icon"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/gmail.jpg" style="height:22px;object-fit:contain"/></div>
+            <div class="ci-icon"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/gmail.jpg" style="width:24px;height:24px;object-fit:contain"/></div>
             <div><div class="ci-label">Alt Email</div><div class="ci-val">dolonthomaswalter@gmail.com</div></div>
           </a>
           <a href="https://www.linkedin.com/in/thomas-walter-dolon" target="_blank" class="contact-item">
-            <div class="ci-icon"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/linkedIn.png" style="height:22px;object-fit:contain"/></div>
+            <div class="ci-icon"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/linkedIn.png" style="width:24px;height:24px;object-fit:contain"/></div>
             <div><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/thomas-walter-dolon</div></div>
           </a>
         </div>
