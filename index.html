@@ -219,6 +219,7 @@ footer span{color:var(--red2)}
       <span class="accent">Walter Dolon</span>
     </h1>
     <div class="hero-divider"><span>SANCTIONS · FRAUD · CHARGEBACKS · ONBOARDING</span></div>
+
     <p class="hero-desc">A decade of financial crime compliance at JPMorgan Chase & Co. and ING Hubs Philippines. Bringing institutional-grade expertise in sanctions screening, fraud detection, and high-risk merchant onboarding — now available as a freelance specialist.</p>
     <div class="hero-btns">
       <a href="#services" class="btn-primary">View Services</a>
@@ -587,6 +588,29 @@ const obs = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
 },{threshold:0.1});
 document.querySelectorAll('.reveal,.reveal-left').forEach(el=>obs.observe(el));
+
+// Ticker scroll
+const track = document.getElementById('ticker-track');
+if(track){
+  // Clone all cards for seamless loop
+  const cards = Array.from(track.children);
+  cards.forEach(c => track.appendChild(c.cloneNode(true)));
+  let pos = 0;
+  const speed = 0.5;
+  let paused = false;
+  track.addEventListener('mouseenter', () => paused = true);
+  track.addEventListener('mouseleave', () => paused = false);
+  function tick(){
+    if(!paused){
+      pos -= speed;
+      const half = track.scrollWidth / 2;
+      if(Math.abs(pos) >= half) pos = 0;
+      track.style.transform = `translateX(${pos}px)`;
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
 
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
