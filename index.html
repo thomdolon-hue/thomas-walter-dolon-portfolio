@@ -16,6 +16,15 @@
   --slate2:#b0c4d8;--text:#e8ecf0;--text2:#98aab8;--text3:#5a6e7e;
   --border:rgba(192,57,43,0.2);--border2:rgba(192,57,43,0.4);
   --grid:rgba(255,255,255,0.02);
+  --nav-bg:rgba(8,10,13,0.95);
+}
+body.light-mode{
+  --black:#f0f2f5;--dark:#ffffff;--dark2:#f5f7fa;--dark3:#eaecf0;
+  --steel:#dde2ea;--red:#c0392b;--red2:#e74c3c;
+  --slate2:#3d4a5c;--text:#0e1117;--text2:#3d4a5c;--text3:#7a8899;
+  --border:rgba(192,57,43,0.2);--border2:rgba(192,57,43,0.35);
+  --grid:rgba(0,0,0,0.03);
+  --nav-bg:rgba(240,242,245,0.95);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--text);line-height:1.6;overflow-x:hidden}
@@ -25,7 +34,11 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--text);l
 body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,10,13,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05);padding:0 2.5rem}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid rgba(128,128,128,0.1);padding:0 2.5rem}
+
+/* THEME TOGGLE */
+.theme-toggle{background:none;border:1px solid rgba(128,128,128,0.2);color:var(--text);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s;flex-shrink:0}
+.theme-toggle:hover{border-color:var(--red2);color:var(--red2)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:4px;color:#fff}
 .nav-logo span{color:var(--red2)}
@@ -35,7 +48,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,10,13,0.95
 .nav-cta{background:var(--red)!important;color:#fff!important;padding:0.45rem 1.4rem;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)}
 
 /* HERO */
-#hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;position:relative;overflow:hidden;background:var(--black)}
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;position:relative;overflow:hidden;background:var(--black);transition:background 0.3s}
+body.light-mode #hero{background:#1a1a2e}
+body.light-mode h1.hero-name,body.light-mode .hero-desc,body.light-mode .hero-divider span{color:rgba(255,255,255,0.9)}
+body.light-mode .stat-num,body.light-mode .stat-label{color:rgba(255,255,255,0.85)}
+body.light-mode .stat{border-right-color:rgba(255,255,255,0.1)}
+body.light-mode .hero-tag{color:var(--red2)}
+body,section,.t-card,.service-card,.skill-card,.contact-item,.form-wrap,.t-review{transition:background 0.3s,color 0.3s,border-color 0.3s}
 .hero-accent{position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,transparent 30%,rgba(192,57,43,0.04) 100%);pointer-events:none}
 .hero-accent2{position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--red),transparent)}
 .hero-scanline{position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.03) 3px,rgba(0,0,0,0.03) 4px);pointer-events:none}
@@ -200,6 +219,7 @@ footer span{color:var(--red2)}
       <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" class="nav-cta">Hire Me</a></li>
     </ul>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">🌙</button>
   </div>
 </nav>
 
@@ -528,6 +548,17 @@ footer span{color:var(--red2)}
 </footer>
 
 <script>
+// Theme toggle
+const toggle=document.getElementById('theme-toggle');
+const savedTheme=localStorage.getItem('theme');
+if(savedTheme==='light'){document.body.classList.add('light-mode');toggle.textContent='☀️';}
+toggle.addEventListener('click',()=>{
+  document.body.classList.toggle('light-mode');
+  const isLight=document.body.classList.contains('light-mode');
+  toggle.textContent=isLight?'☀️':'🌙';
+  localStorage.setItem('theme',isLight?'light':'dark');
+});
+
 // Navbar scroll
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').style.borderBottomColor=window.scrollY>40?'rgba(192,57,43,0.2)':'rgba(255,255,255,0.05)';
