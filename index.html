@@ -4,38 +4,24 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Thomas Walter Dolon | Fintech & Compliance Specialist</title>
-
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DH4MK7YNYN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DH4MK7YNYN');
-</script>
-
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-DH4MK7YNYN');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow+Condensed:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --black:#080a0d;--dark:#0d1117;--dark2:#111820;--dark3:#161e28;
-  --steel:#1e2a38;--steel2:#243344;
-  --red:#c0392b;--red2:#e74c3c;--red3:#ff6b57;
-  --slate:#8fa3b8;--slate2:#b0c4d8;--slate3:#d0dce8;
-  --text:#e8ecf0;--text2:#98aab8;--text3:#5a6e7e;
+  --steel:#1e2a38;--red:#c0392b;--red2:#e74c3c;
+  --slate2:#b0c4d8;--text:#e8ecf0;--text2:#98aab8;--text3:#5a6e7e;
   --border:rgba(192,57,43,0.2);--border2:rgba(192,57,43,0.4);
   --grid:rgba(255,255,255,0.02);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--text);line-height:1.6;overflow-x:hidden}
-
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:var(--dark)}
 ::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px}
-
-/* GRID OVERLAY */
 body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
 
 /* NAV */
@@ -43,11 +29,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,10,13,0.95
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:4px;color:#fff}
 .nav-logo span{color:var(--red2)}
-.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
-.nav-links a{color:var(--text3);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:color 0.2s}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{color:var(--text3);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:color 0.2s}
 .nav-links a:hover{color:var(--red2)}
-.nav-cta{background:var(--red)!important;color:#fff!important;padding:0.45rem 1.4rem;font-family:'Barlow Condensed',sans-serif;font-size:0.82rem!important;letter-spacing:2px!important;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background 0.2s!important}
-.nav-cta:hover{background:var(--red2)!important;color:#fff!important}
+.nav-cta{background:var(--red)!important;color:#fff!important;padding:0.45rem 1.4rem;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)}
 
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;position:relative;overflow:hidden;background:var(--black)}
@@ -56,8 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,10,13,0.95
 .hero-scanline{position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.03) 3px,rgba(0,0,0,0.03) 4px);pointer-events:none}
 .hero-content{max-width:1200px;margin:0 auto;width:100%;padding:0 2.5rem;position:relative;z-index:1}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--red2);letter-spacing:3px;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.6s 0.2s forwards}
-.hero-tag::before{content:'';width:24px;height:1px;background:var(--red2)}
-.hero-tag::after{content:'';width:24px;height:1px;background:var(--red2)}
+.hero-tag::before,.hero-tag::after{content:'';width:24px;height:1px;background:var(--red2)}
 h1.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,12vw,11rem);line-height:0.9;letter-spacing:4px;color:#fff;margin-bottom:0.5rem;opacity:0;animation:fadeUp 0.6s 0.4s forwards}
 h1.hero-name .accent{color:var(--red2);display:block}
 .hero-divider{display:flex;align-items:center;gap:1rem;margin:1.5rem 0;opacity:0;animation:fadeUp 0.6s 0.6s forwards}
@@ -78,7 +62,7 @@ h1.hero-name .accent{color:var(--red2);display:block}
 .stat-label{font-family:'Share Tech Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-top:6px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
-/* SECTION BASE */
+/* SECTIONS */
 section{padding:7rem 2.5rem;position:relative;z-index:1}
 .container{max-width:1200px;margin:0 auto}
 .section-tag{font-family:'Share Tech Mono',monospace;font-size:0.68rem;letter-spacing:3px;color:var(--red2);text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem}
@@ -139,6 +123,18 @@ section{padding:7rem 2.5rem;position:relative;z-index:1}
 .skill-icon{font-size:1.2rem;width:32px;text-align:center;flex-shrink:0;opacity:0.85}
 .skill-name{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:1px;color:var(--slate2);text-transform:uppercase}
 
+/* TESTIMONIALS */
+#testimonials{background:var(--dark2)}
+.ticker-outer{overflow:hidden;position:relative;width:100%}
+.ticker-outer::before,.ticker-outer::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+.ticker-outer::before{left:0;background:linear-gradient(to right,var(--dark2),transparent)}
+.ticker-outer::after{right:0;background:linear-gradient(to left,var(--dark2),transparent)}
+.ticker-track{display:flex;gap:1.5rem;width:max-content}
+.t-review{background:var(--dark);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:2rem;width:420px;min-width:420px;flex-shrink:0;position:relative;box-sizing:border-box}
+
+/* PROJECTS */
+#projects{background:var(--black)}
+
 /* CONTACT */
 #contact{background:var(--dark2)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
@@ -156,7 +152,7 @@ section{padding:7rem 2.5rem;position:relative;z-index:1}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:1rem}
 .fg label{font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase}
 .fg input,.fg select,.fg textarea{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.15);padding:0.65rem 0.9rem;color:var(--text);font-size:0.85rem;font-family:'Barlow',sans-serif;outline:none;transition:border-color 0.2s;border-radius:0}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red);border-bottom-color:var(--red2)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red)}
 .fg select option{background:var(--dark2)}
 .fg textarea{resize:vertical;font-family:'Barlow',sans-serif}
 .btn-submit{background:var(--red);color:#fff;padding:0.9rem 2rem;border:none;font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;width:100%;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background 0.2s}
@@ -214,35 +210,12 @@ footer span{color:var(--red2)}
   <div class="hero-scanline"></div>
   <div class="hero-content">
     <div class="hero-tag">FINTECH · COMPLIANCE · PAYMENTS</div>
-    <h1 class="hero-name">
-      Thomas
-      <span class="accent">Walter Dolon</span>
-    </h1>
+    <h1 class="hero-name">Thomas<span class="accent">Walter Dolon</span></h1>
     <div class="hero-divider"><span>SANCTIONS · FRAUD · CHARGEBACKS · ONBOARDING</span></div>
-
     <p class="hero-desc">A decade of financial crime compliance at JPMorgan Chase & Co. and ING Hubs Philippines. Bringing institutional-grade expertise in sanctions screening, fraud detection, and high-risk merchant onboarding — now available as a freelance specialist.</p>
     <div class="hero-btns">
       <a href="#services" class="btn-primary">View Services</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
-      <div style="background:var(--dark);padding:2.5rem;position:relative;border-left:3px solid var(--red)">
-        <div style="display:flex;align-items:center;gap:4px;margin-bottom:1.25rem">
-          <span style="color:#f1c40f;font-size:1rem">★★★★★</span>
-          <span style="font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--red2);margin-left:8px;letter-spacing:1px">5.0 / 5.0</span>
-        </div>
-        <p style="font-size:0.92rem;color:var(--slate2);line-height:1.9;font-style:italic;margin-bottom:1.5rem;font-weight:300">"Thomas was great for us at finding and communicating with prospective payment acquirers while working with us. Very detail orientated and able to operate with a high level of autonomy, finding solutions and identifying next logical steps. Definitely looking to work with again in the future."</p>
-        <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:1.25rem;margin-bottom:1rem">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem">Project</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;color:#fff;font-weight:600;letter-spacing:0.5px">Payment Processing Specialist — High-Risk Merchant Research & Outreach</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--text3);letter-spacing:1px;margin-top:4px">Apr 2026 – Aug 2026 · 680 hrs</div>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">✓ Solution Oriented</span>
-          <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">✓ Clear Communicator</span>
-          <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">✓ Detail Oriented</span>
-        </div>
-        <div style="position:absolute;top:1.75rem;right:1.75rem;font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:1px">UPWORK · VERIFIED</div>
-      </div>
-
     </div>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Years Experience</div></div>
@@ -268,20 +241,16 @@ footer span{color:var(--red2)}
         <p class="section-tag reveal">About Me</p>
         <h2 class="section-title reveal reveal-delay-1">COMPLIANCE &<br><span>PAYMENTS</span> PRO</h2>
         <div class="rule reveal reveal-delay-2"></div>
-        <div class="reveal reveal-delay-2">
-          <p class="about-body">I'm a seasoned fintech and compliance specialist with over a decade of hands-on experience at JPMorgan Chase & Co. and ING Hubs Philippines. My career spans fraud prevention, chargeback management, name and transaction sanctions screening, and financial crime compliance at a global scale.</p>
-          <p class="about-body">Today, I offer my deep institutional expertise as a freelancer — helping businesses navigate complex compliance requirements, secure payment processing, and build robust risk management workflows.</p>
-          <p class="about-body">I also build my own compliance tools — including <a href="https://due-dex.vercel.app" target="_blank" style="color:var(--red2);text-decoration:none;border-bottom:1px solid var(--border2)">DueDex</a>, a KYC/KYB due diligence web app I designed and launched to streamline PSP and merchant vetting.</p>
+        <div class="about-body reveal reveal-delay-2">
+          <p>I'm a seasoned fintech and compliance specialist with over a decade of hands-on experience at JPMorgan Chase & Co. and ING Hubs Philippines. My career spans fraud prevention, chargeback management, name and transaction sanctions screening, and financial crime compliance at a global scale.</p>
+          <p>Today, I offer my deep institutional expertise as a freelancer — helping businesses navigate complex compliance requirements, secure payment processing, and build robust risk management workflows.</p>
+          <p>I also build my own compliance tools — including <a href="https://due-dex.vercel.app" target="_blank" style="color:var(--red2);text-decoration:none;border-bottom:1px solid var(--border2)">DueDex</a>, a KYC/KYB due diligence web app I designed and launched to streamline PSP and merchant vetting.</p>
         </div>
         <div class="about-tags reveal reveal-delay-3">
-          <span class="tag">Sanctions Screening</span>
-          <span class="tag">Fraud Prevention</span>
-          <span class="tag">Chargebacks</span>
-          <span class="tag">KYC / KYB</span>
-          <span class="tag">Payment Onboarding</span>
-          <span class="tag">OFAC / EU / UN</span>
-          <span class="tag">SWIFT / SEPA</span>
-          <span class="tag">AML Compliance</span>
+          <span class="tag">Sanctions Screening</span><span class="tag">Fraud Prevention</span>
+          <span class="tag">Chargebacks</span><span class="tag">KYC / KYB</span>
+          <span class="tag">Payment Onboarding</span><span class="tag">OFAC / EU / UN</span>
+          <span class="tag">SWIFT / SEPA</span><span class="tag">AML Compliance</span>
         </div>
       </div>
     </div>
@@ -311,7 +280,7 @@ footer span{color:var(--red2)}
         <div class="svc-num">// 03</div>
         <div class="svc-title">Alert Handling — Name & Transaction Screening</div>
         <p class="svc-desc">Senior-level review and disposition of sanctions alerts using Fircosoft FFF and FMF. OFAC, EU, and UN sanctions list investigation, SWIFT and SEPA payment message interpretation, fuzzy match logic analysis, and full audit-ready documentation.</p>
-        <div class="svc-badge">4+ yrs exp · JPMorgan Chase</div>
+        <div class="svc-badge">4+ yrs exp · ING Hubs PH</div>
       </div>
       <div class="service-card">
         <div class="svc-num">// 04</div>
@@ -330,13 +299,9 @@ footer span{color:var(--red2)}
     <h2 class="section-title reveal reveal-delay-1">PROFESSIONAL <span>EXPERIENCE</span></h2>
     <div class="rule reveal reveal-delay-2"></div>
     <div class="timeline">
-
       <div class="t-item reveal">
         <div class="t-card">
-          <div class="t-header">
-            <span class="t-role">Onboarding Specialist</span>
-            <span class="t-period">2026 – PRESENT 🟢</span>
-          </div>
+          <div class="t-header"><span class="t-role">Onboarding Specialist</span><span class="t-period">2026 – PRESENT 🟢</span></div>
           <div class="t-company">Freelance / Independent</div>
           <ul class="t-bullets">
             <li>Helping high-risk merchants secure payment processing solutions</li>
@@ -346,13 +311,9 @@ footer span{color:var(--red2)}
           </ul>
         </div>
       </div>
-
       <div class="t-item reveal">
         <div class="t-card">
-          <div class="t-header">
-            <span class="t-role">Screening Testing & Optimization Expert</span>
-            <span class="t-period">Apr 2024 – Mar 2026</span>
-          </div>
+          <div class="t-header"><span class="t-role">Screening Testing & Optimization Expert</span><span class="t-period">Apr 2024 – Mar 2026</span></div>
           <div class="t-company"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/ing-logo.jpg" alt="ING" style="height:18px;display:block"/>ING Hubs Philippines</div>
           <ul class="t-bullets">
             <li>End-to-end testing of Name and Transaction Screening systems using Fircosoft Classics</li>
@@ -363,13 +324,9 @@ footer span{color:var(--red2)}
           </ul>
         </div>
       </div>
-
       <div class="t-item reveal">
         <div class="t-card">
-          <div class="t-header">
-            <span class="t-role">Senior Alert Handler – Name & Transaction Screening</span>
-            <span class="t-period">Mar 2020 – Apr 2024</span>
-          </div>
+          <div class="t-header"><span class="t-role">Senior Alert Handler – Name & Transaction Screening</span><span class="t-period">Mar 2020 – Apr 2024</span></div>
           <div class="t-company"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/ing-logo.jpg" alt="ING" style="height:18px;display:block"/>ING Hubs Philippines</div>
           <ul class="t-bullets">
             <li>Reviewed and dispositioned screening alerts using Fircosoft FFF and FMF</li>
@@ -380,13 +337,9 @@ footer span{color:var(--red2)}
           </ul>
         </div>
       </div>
-
       <div class="t-item reveal">
         <div class="t-card">
-          <div class="t-header">
-            <span class="t-role">Chargeback & Representment Senior Specialist I</span>
-            <span class="t-period">Aug 2014 – Mar 2020</span>
-          </div>
+          <div class="t-header"><span class="t-role">Chargeback & Representment Senior Specialist I</span><span class="t-period">Aug 2014 – Mar 2020</span></div>
           <div class="t-company"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/jpmorgan-logo.png" alt="JPMorgan Chase" style="height:16px;filter:brightness(0) invert(1);opacity:0.8;display:block"/>JPMorgan Chase & Co. · Metro Manila</div>
           <ul class="t-bullets">
             <li>Managed end-to-end chargeback and representment lifecycle under Visa and Mastercard frameworks</li>
@@ -396,13 +349,9 @@ footer span{color:var(--red2)}
           </ul>
         </div>
       </div>
-
       <div class="t-item reveal">
         <div class="t-card">
-          <div class="t-header">
-            <span class="t-role">Fraud Prevention Specialist III</span>
-            <span class="t-period">May 2012 – Aug 2014</span>
-          </div>
+          <div class="t-header"><span class="t-role">Fraud Prevention Specialist III</span><span class="t-period">May 2012 – Aug 2014</span></div>
           <div class="t-company"><img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/jpmorgan-logo.png" alt="JPMorgan Chase" style="height:16px;filter:brightness(0) invert(1);opacity:0.8;display:block"/>JPMorgan Chase & Co.</div>
           <ul class="t-bullets">
             <li>Monitored and investigated debit and credit card fraud — CNP, counterfeit, account takeover</li>
@@ -412,7 +361,6 @@ footer span{color:var(--red2)}
           </ul>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -420,7 +368,7 @@ footer span{color:var(--red2)}
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
-    <p class="section-tag reveal" style="color:var(--red2)">Tools & Technologies</p>
+    <p class="section-tag reveal">Tools & Technologies</p>
     <h2 class="section-title reveal reveal-delay-1">TECHNICAL <span>SKILLS</span></h2>
     <div class="rule reveal reveal-delay-2"></div>
     <div class="skills-grid reveal reveal-delay-2">
@@ -439,31 +387,44 @@ footer span{color:var(--red2)}
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" style="background:var(--black)">
+<section id="testimonials">
   <div class="container">
     <p class="section-tag reveal">Client Feedback</p>
     <h2 class="section-title reveal reveal-delay-1">CLIENT <span>TESTIMONIALS</span></h2>
     <div class="rule reveal reveal-delay-2"></div>
-    <div class="reveal reveal-delay-2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;background:rgba(255,255,255,0.04)">
+    <div class="ticker-outer reveal reveal-delay-2">
+      <div class="ticker-track" id="ticker-track">
 
-      <div style="background:var(--dark);padding:2.5rem;position:relative;border-left:3px solid var(--red)">
-        <div style="display:flex;align-items:center;gap:4px;margin-bottom:1.25rem">
-          <span style="color:#f1c40f;font-size:1rem">★★★★★</span>
-          <span style="font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--red2);margin-left:8px;letter-spacing:1px">5.0 / 5.0</span>
+        <div class="t-review">
+          <div style="position:absolute;top:1.25rem;right:1.25rem;font-family:'Share Tech Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:1px">UPWORK · VERIFIED</div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:1rem"><span style="color:#f1c40f;font-size:0.9rem">★★★★★</span><span style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red2);margin-left:6px;letter-spacing:1px">5.0 / 5.0</span></div>
+          <p style="font-size:0.85rem;color:var(--slate2);line-height:1.85;font-style:italic;margin-bottom:1.25rem;font-weight:300">"Thomas is a great onboarding specialist, well versed in KYC, AML and onboarding processes. He is a real tribute to any international team and I'm sure we'll work with him again. Thank you!"</p>
+          <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:1rem;margin-bottom:0.85rem">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;color:#fff;font-weight:600;margin-bottom:3px">Onboarding Specialist (KYC/KYB) with Payments Experience</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:1px">Feb 2026 – Jul 2026 · 655 hrs</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:3px 10px;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase">✓ Clear Communicator</span>
+            <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:3px 10px;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase">✓ Accountable for Outcomes</span>
+          </div>
         </div>
-        <p style="font-size:0.92rem;color:var(--slate2);line-height:1.9;font-style:italic;margin-bottom:1.5rem;font-weight:300">"Thomas is a great onboarding specialist, well versed in KYC, AML and onboarding processes. He is a real tribute to any international team and I'm sure we'll work with him again. Thank you!"</p>
-        <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:1.25rem;margin-bottom:1rem">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem">Project</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;color:#fff;font-weight:600;letter-spacing:0.5px">Onboarding Specialist (KYC/KYB) with Payments Experience</div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--text3);letter-spacing:1px;margin-top:4px">Feb 2026 – Jul 2026 · 655 hrs</div>
+
+        <div class="t-review">
+          <div style="position:absolute;top:1.25rem;right:1.25rem;font-family:'Share Tech Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:1px">UPWORK · VERIFIED</div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:1rem"><span style="color:#f1c40f;font-size:0.9rem">★★★★★</span><span style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red2);margin-left:6px;letter-spacing:1px">5.0 / 5.0</span></div>
+          <p style="font-size:0.85rem;color:var(--slate2);line-height:1.85;font-style:italic;margin-bottom:1.25rem;font-weight:300">"Thomas was great for us at finding and communicating with prospective payment acquirers while working with us. Very detail orientated and able to operate with a high level of autonomy, finding solutions and identifying next logical steps. Definitely looking to work with again in the future."</p>
+          <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:1rem;margin-bottom:0.85rem">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;color:#fff;font-weight:600;margin-bottom:3px">Payment Processing Specialist — High-Risk Merchant Research & Outreach</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:1px">Apr 2026 – Aug 2026 · 680 hrs</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:3px 10px;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase">✓ Solution Oriented</span>
+            <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:3px 10px;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase">✓ Clear Communicator</span>
+            <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:3px 10px;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase">✓ Detail Oriented</span>
+          </div>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">✓ Clear Communicator</span>
-          <span style="border:1px solid rgba(192,57,43,0.3);color:var(--red2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">✓ Accountable for Outcomes</span>
-        </div>
-        <div style="position:absolute;top:1.75rem;right:1.75rem;font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:1px">UPWORK · VERIFIED</div>
+
       </div>
-
     </div>
     <div class="reveal reveal-delay-3" style="margin-top:1.5rem;display:flex;align-items:center;gap:1rem">
       <div style="font-family:'Share Tech Mono',monospace;font-size:0.68rem;color:var(--text3);letter-spacing:2px">100% JOB SUCCESS · 4 JOBS COMPLETED · 5.0 RATING</div>
@@ -473,33 +434,29 @@ footer span{color:var(--red2)}
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" style="background:var(--dark2)">
+<section id="projects">
   <div class="container">
     <p class="section-tag reveal">Built by Me</p>
     <h2 class="section-title reveal reveal-delay-1">SIDE <span>PROJECTS</span></h2>
     <div class="rule reveal reveal-delay-2"></div>
     <div class="reveal reveal-delay-2" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.04)">
-
-      <div style="background:var(--dark);padding:2.5rem;position:relative;overflow:hidden;transition:background 0.3s" onmouseover="this.style.background='var(--dark3)'" onmouseout="this.style.background='var(--dark)'">
-        <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:var(--red)"></div>
+      <div style="background:var(--dark);padding:2.5rem;position:relative;overflow:hidden;border-left:3px solid var(--red)">
         <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--red);letter-spacing:3px;margin-bottom:1.25rem;opacity:0.7">// TOOL</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:2px;color:#fff;text-transform:uppercase;margin-bottom:0.5rem">DueDex</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:2px;color:#fff;text-transform:uppercase;margin-bottom:0.5rem">DueDex</div>
         <div style="font-family:'Share Tech Mono',monospace;font-size:0.68rem;color:var(--red2);letter-spacing:2px;margin-bottom:1.25rem">KYC / KYB DUE DILIGENCE WEB APP</div>
         <p style="font-size:0.85rem;color:var(--text2);line-height:1.85;font-weight:300;margin-bottom:1.5rem">A compliance tool I designed and built to streamline PSP and merchant due diligence. DueDex automates KYC/KYB vetting workflows, powered by the Groq API — enabling fast, structured screening of payment providers and high-risk merchants across multiple jurisdictions.</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.75rem">
           <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">KYC / KYB</span>
-          <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72px;letter-spacing:1.5px;text-transform:uppercase;font-size:0.72rem">Groq API</span>
+          <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">Groq API</span>
           <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">PSP Vetting</span>
           <span style="border:1px solid rgba(255,255,255,0.08);color:var(--slate2);padding:4px 12px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase">Companies House</span>
         </div>
         <a href="https://due-dex.vercel.app" target="_blank" class="btn-primary" style="font-size:0.78rem;padding:0.7rem 1.75rem">View Live Tool</a>
       </div>
-
       <div style="background:var(--dark);padding:2.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;opacity:0.4">
         <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--text3);letter-spacing:3px;margin-bottom:1rem">// MORE COMING SOON</div>
         <div style="width:40px;height:1px;background:var(--border);margin:0 auto"></div>
       </div>
-
     </div>
   </div>
 </section>
@@ -538,14 +495,8 @@ footer span{color:var(--red2)}
           <div class="form-title">SEND AN INQUIRY</div>
           <form id="contact-form" action="https://formspree.io/f/xvzypbwb" method="POST">
             <div class="form-row">
-              <div class="fg">
-                <label>Full Name</label>
-                <input type="text" name="name" required placeholder="Your name"/>
-              </div>
-              <div class="fg">
-                <label>Email Address</label>
-                <input type="email" name="email" required placeholder="your@email.com"/>
-              </div>
+              <div class="fg"><label>Full Name</label><input type="text" name="name" required placeholder="Your name"/></div>
+              <div class="fg"><label>Email Address</label><input type="email" name="email" required placeholder="your@email.com"/></div>
             </div>
             <div class="fg">
               <label>Service Needed</label>
@@ -558,10 +509,7 @@ footer span{color:var(--red2)}
                 <option>Other</option>
               </select>
             </div>
-            <div class="fg">
-              <label>Message</label>
-              <textarea name="message" required rows="5" placeholder="Tell me about your project or inquiry..."></textarea>
-            </div>
+            <div class="fg"><label>Message</label><textarea name="message" required rows="5" placeholder="Tell me about your project or inquiry..."></textarea></div>
             <button type="submit" class="btn-submit">Send Message</button>
             <div id="form-status"></div>
           </form>
@@ -580,56 +528,45 @@ footer span{color:var(--red2)}
 </footer>
 
 <script>
+// Navbar scroll
 window.addEventListener('scroll',()=>{
-  document.getElementById('navbar').style.borderBottomColor = window.scrollY > 40 ? 'rgba(192,57,43,0.2)' : 'rgba(255,255,255,0.05)';
+  document.getElementById('navbar').style.borderBottomColor=window.scrollY>40?'rgba(192,57,43,0.2)':'rgba(255,255,255,0.05)';
 });
 
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
-},{threshold:0.1});
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:0.1});
 document.querySelectorAll('.reveal,.reveal-left').forEach(el=>obs.observe(el));
 
 // Ticker scroll
-const track = document.getElementById('ticker-track');
+const track=document.getElementById('ticker-track');
 if(track){
-  // Clone all cards for seamless loop
-  const cards = Array.from(track.children);
-  cards.forEach(c => track.appendChild(c.cloneNode(true)));
-  let pos = 0;
-  const speed = 0.5;
-  let paused = false;
-  track.addEventListener('mouseenter', () => paused = true);
-  track.addEventListener('mouseleave', () => paused = false);
-  function tick(){
+  const clone=track.innerHTML;
+  track.innerHTML+=clone;
+  let pos=0,paused=false;
+  track.parentElement.addEventListener('mouseenter',()=>paused=true);
+  track.parentElement.addEventListener('mouseleave',()=>paused=false);
+  (function tick(){
     if(!paused){
-      pos -= speed;
-      const half = track.scrollWidth / 2;
-      if(Math.abs(pos) >= half) pos = 0;
-      track.style.transform = `translateX(${pos}px)`;
+      pos-=0.5;
+      if(Math.abs(pos)>=track.scrollWidth/2)pos=0;
+      track.style.transform=`translateX(${pos}px)`;
     }
     requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
+  })();
 }
 
-const form = document.getElementById('contact-form');
-const status = document.getElementById('form-status');
-form.addEventListener('submit', async function(e){
+// Form
+const form=document.getElementById('contact-form');
+const status=document.getElementById('form-status');
+form.addEventListener('submit',async function(e){
   e.preventDefault();
-  const btn = form.querySelector('.btn-submit');
-  btn.textContent = 'TRANSMITTING...';
-  btn.style.opacity = '0.6';
+  const btn=form.querySelector('.btn-submit');
+  btn.textContent='TRANSMITTING...';btn.style.opacity='0.6';
   try{
-    const res = await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
-    if(res.ok){
-      status.style.display='block';status.style.color='var(--red2)';
-      status.textContent='// MESSAGE SENT. I\'LL BE IN TOUCH SOON.';
-      form.reset();
-    } else throw new Error();
-  } catch{
-    status.style.display='block';status.style.color='#e74c3c';
-    status.textContent='// ERROR. PLEASE EMAIL ME DIRECTLY.';
-  }
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(res.ok){status.style.display='block';status.style.color='var(--red2)';status.textContent='// MESSAGE SENT. I\'LL BE IN TOUCH SOON.';form.reset();}
+    else throw new Error();
+  }catch{status.style.display='block';status.style.color='#e74c3c';status.textContent='// ERROR. PLEASE EMAIL ME DIRECTLY.';}
   btn.textContent='SEND MESSAGE';btn.style.opacity='1';
 });
 </script>
