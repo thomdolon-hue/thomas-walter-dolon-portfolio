@@ -20,12 +20,55 @@
 }
 body.light-mode{
   --black:#f0f2f5;--dark:#ffffff;--dark2:#f5f7fa;--dark3:#eaecf0;
-  --steel:#dde2ea;--red:#c0392b;--red2:#e74c3c;
-  --slate2:#3d4a5c;--text:#0e1117;--text2:#3d4a5c;--text3:#7a8899;
+  --steel:#dde2ea;--red:#c0392b;--red2:#c0392b;
+  --slate2:#2c3e50;--text:#0e1117;--text2:#2c3e50;--text3:#5a6e7e;
   --border:rgba(192,57,43,0.2);--border2:rgba(192,57,43,0.35);
   --grid:rgba(0,0,0,0.03);
   --nav-bg:rgba(240,242,245,0.95);
 }
+/* Light mode font overrides */
+body.light-mode .nav-logo{color:var(--ink,#0e1117)}
+body.light-mode .nav-links a{color:#3d4a5c}
+body.light-mode .nav-links a:hover{color:var(--red)}
+body.light-mode .section-tag{color:var(--red)}
+body.light-mode .section-title{color:#0e1117}
+body.light-mode .section-title span{color:var(--red)}
+body.light-mode .rule{background:var(--red)}
+body.light-mode .about-body p,body.light-mode .svc-desc,body.light-mode .t-bullets li,body.light-mode .contact-intro{color:#2c3e50}
+body.light-mode .t-role,body.light-mode .svc-title{color:#0e1117}
+body.light-mode .t-company{color:var(--red)}
+body.light-mode .t-period{color:var(--red);border-color:rgba(192,57,43,0.3)}
+body.light-mode .svc-num{color:var(--red)}
+body.light-mode .svc-badge{color:var(--red)}
+body.light-mode .tag{color:#2c3e50;border-color:rgba(0,0,0,0.12)}
+body.light-mode .tag:hover{color:var(--red);border-color:var(--red)}
+body.light-mode .skill-name{color:#2c3e50}
+body.light-mode .skill-card{background:#fff;border-left-color:transparent}
+body.light-mode .skill-card:hover{background:#f5f7fa;border-left-color:var(--red)}
+body.light-mode .ci-label{color:#7a8899}
+body.light-mode .ci-val{color:#0e1117}
+body.light-mode .ci-icon{background:#e8ecf0}
+body.light-mode .fg label{color:#7a8899}
+body.light-mode .fg input,body.light-mode .fg select,body.light-mode .fg textarea{background:#f5f7fa;border-color:rgba(0,0,0,0.1);border-bottom-color:rgba(0,0,0,0.2);color:#0e1117}
+body.light-mode .fg input:focus,body.light-mode .fg select,body.light-mode .fg textarea:focus{border-color:var(--red)}
+body.light-mode .form-title{color:#0e1117}
+body.light-mode .form-wrap{background:#fff;border-color:rgba(0,0,0,0.07);border-top-color:var(--red)}
+body.light-mode .footer-logo{color:rgba(0,0,0,0.15)}
+body.light-mode footer p{color:#7a8899}
+body.light-mode footer span{color:var(--red)}
+body.light-mode .t-review p{color:#2c3e50}
+body.light-mode .t-card{background:#fff;border-color:rgba(0,0,0,0.06)}
+body.light-mode .service-card{background:#fff}
+body.light-mode .service-card:hover{background:#f5f7fa}
+body.light-mode .t-item::before{background:#fff;border-color:var(--red)}
+body.light-mode .timeline::before{background:linear-gradient(180deg,var(--red),rgba(192,57,43,0.1))}
+body.light-mode .skills-grid{background:rgba(0,0,0,0.06)}
+body.light-mode .services-grid{background:rgba(0,0,0,0.06)}
+body.light-mode .contact-item{background:#fff;border-color:rgba(0,0,0,0.06)}
+body.light-mode .contact-item:hover{border-left-color:var(--red)}
+body.light-mode #skills{background:#f0f2f5}
+body.light-mode #projects{background:#f5f7fa}
+body.light-mode .theme-toggle{border-color:rgba(0,0,0,0.15);color:#0e1117}
 html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--text);line-height:1.6;overflow-x:hidden}
 ::-webkit-scrollbar{width:4px}
