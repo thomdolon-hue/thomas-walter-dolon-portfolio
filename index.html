@@ -562,14 +562,15 @@ footer span{color:var(--red2)}
     <div class="rule reveal reveal-delay-2"></div>
     <p class="reveal reveal-delay-2" style="font-size:0.92rem;color:var(--text2);line-height:1.9;margin-bottom:2.5rem;font-weight:300;max-width:560px">Let's talk about your compliance needs. Pick a time that works for you and I'll reach out to discuss how I can help your business.</p>
     <div class="reveal reveal-delay-3" style="border:1px solid var(--border);border-top:2px solid var(--red);overflow:hidden">
-      <iframe src="https://calendly.com/thom-dolon" width="100%" height="700" frameborder="0" scrolling="yes" style="display:block;background:transparent"></iframe>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/thom-dolon" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
   </div>
 </section>
 
 <script>
 window.addEventListener('message', function(e){
-  if(e.data && e.data.event && e.data.event === 'calendly.event_scheduled'){
+  if(e.origin === 'https://calendly.com' && e.data && e.data.event && e.data.event === 'calendly.event_scheduled'){
     window.location.href = 'thankyou.html?type=booking';
   }
 });
@@ -608,6 +609,7 @@ window.addEventListener('message', function(e){
         <div class="form-wrap">
           <div class="form-title">SEND AN INQUIRY</div>
           <form id="contact-form" action="https://formspree.io/f/xvzypbwb" method="POST">
+            <input type="hidden" name="_next" value="https://thomdolon-hue.github.io/thomas-walter-dolon-portfolio/thankyou.html?type=inquiry"/>
             <div class="form-row">
               <div class="fg"><label>Full Name</label><input type="text" name="name" required placeholder="Your name"/></div>
               <div class="fg"><label>Email Address</label><input type="email" name="email" required placeholder="your@email.com"/></div>
@@ -689,10 +691,12 @@ form.addEventListener('submit',async function(e){
     const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
     if(res.ok){
       window.location.href='thankyou.html?type=inquiry';
-    }
-    else throw new Error();
-  }catch{status.style.display='block';status.style.color='#e74c3c';status.textContent='// ERROR. PLEASE EMAIL ME DIRECTLY.';}
-  btn.textContent='SEND MESSAGE';btn.style.opacity='1';
+    } else throw new Error();
+  }catch{
+    status.style.display='block';status.style.color='#e74c3c';
+    status.textContent='// ERROR. PLEASE EMAIL ME DIRECTLY.';
+    btn.textContent='SEND MESSAGE';btn.style.opacity='1';
+  }
 });
 </script>
 </body>
