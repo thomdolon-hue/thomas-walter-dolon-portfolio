@@ -56,6 +56,10 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--text);l
 ::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px}
 body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 0 0 3px rgba(192,57,43,0.6),0 0 20px 6px rgba(231,76,60,0.4),0 0 60px 15px rgba(192,57,43,0.25),0 20px 60px rgba(0,0,0,0.7)}
+  50%{box-shadow:0 0 0 3px rgba(231,76,60,0.9),0 0 30px 12px rgba(231,76,60,0.6),0 0 80px 25px rgba(192,57,43,0.4),0 20px 60px rgba(0,0,0,0.7)}
+}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
 /* NAV */
@@ -282,7 +286,7 @@ footer span{color:var(--red2)}
       <div class="reveal-left">
         <div class="about-img-wrap">
           <div class="img-frame"></div>
-          <img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/about%20me%20v3.png" alt="Thomas Walter Dolon" class="about-img" style="border-radius:50%;aspect-ratio:1/1;object-fit:cover;object-position:top;box-shadow:0 0 0 4px rgba(192,57,43,0.3),0 0 40px rgba(192,57,43,0.15),0 20px 60px rgba(0,0,0,0.6)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <img src="https://raw.githubusercontent.com/thomdolon-hue/thomas-walter-dolon-portfolio/main/images/about%20me%20v3.png" alt="Thomas Walter Dolon" class="about-img" style="border-radius:50%;aspect-ratio:1/1;object-fit:cover;object-position:top;box-shadow:0 0 0 3px rgba(192,57,43,0.6),0 0 20px 6px rgba(231,76,60,0.4),0 0 60px 15px rgba(192,57,43,0.25),0 20px 60px rgba(0,0,0,0.7);animation:glowPulse 3s ease-in-out infinite" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
           <div class="about-placeholder" style="display:none">TWD</div>
         </div>
       </div>
