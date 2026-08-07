@@ -161,8 +161,8 @@ section{padding:7rem 2.5rem;position:relative;z-index:1}
 
 /* SKILLS */
 #skills{background:var(--black)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:rgba(255,255,255,0.03)}
-.skill-card{background:var(--dark);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:background 0.2s,border-left 0.2s;border-left:2px solid transparent}
+.skills-grid{display:flex;flex-wrap:wrap;gap:1px;background:rgba(255,255,255,0.03)}
+.skill-card{background:var(--dark);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:background 0.2s,border-left 0.2s;border-left:2px solid transparent;min-width:210px;flex:1 1 210px}
 .skill-card:hover{background:var(--dark2);border-left-color:var(--red)}
 .skill-icon{font-size:1.2rem;width:32px;text-align:center;flex-shrink:0;opacity:0.85}
 .skill-name{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:1px;color:var(--slate2);text-transform:uppercase}
